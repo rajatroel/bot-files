@@ -79,7 +79,6 @@ try:
     print("\n" + "-"*42)
     print("CONFIGURATION SAVED SUCCESSFULLY!")
     print("-"*42 + "\n")
-    print("You can now run 'python automation.py' to start the automation.\n")
 
 except KeyboardInterrupt:
     print("\n\nSetup cancelled by user. No files were saved.")
