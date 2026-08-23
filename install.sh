@@ -3,7 +3,7 @@ set -e
 
 clear
 echo "========================================"
-echo "         SETTING UP ENVIRONMENT         "
+echo "SETTING UP PERMISSIONS"
 echo "========================================"
 echo ""
 
@@ -14,16 +14,26 @@ while ! ls ~/storage/shared >/dev/null 2>&1; do
     echo ""
     echo "Press [ENTER] to open the"
     read -r -p "permission window..."
-    
+
+    clear
+    echo "========================================"
+    echo "SETTING UP PERMISSIONS"
+    echo "========================================"
+    echo ""
+
     termux-setup-storage
     
-    echo ""
     echo "Please press [ENTER] one more"
     read -r -p "time to continue..."
+
+    clear
+    echo "========================================"
+    echo "SETTING UP PERMISSIONS"
+    echo "========================================"
+    echo ""
     
     # If it fails to read storage after pressing Enter, ask again
     if ! ls ~/storage/shared >/dev/null 2>&1; then
-        echo ""
         echo "Storage permission not detected!"
         echo "You MUST allow storage access"
         echo "to install the bot."
@@ -31,8 +41,6 @@ while ! ls ~/storage/shared >/dev/null 2>&1; do
         echo ""
     fi
 done
-echo "Storage access verified!"
-echo ""
 
 # 2. Open Battery Optimization Settings
 echo "Opening Battery Settings..."
@@ -42,9 +50,14 @@ echo ""
 echo "Press [ENTER] to open"
 read -r -p "battery settings..."
 
+clear
+    echo "========================================"
+    echo "SETTING UP PERMISSIONS"
+    echo "========================================"
+    echo ""
+
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
-echo ""
 echo "Have you changed the settings"
 echo "and returned to Termux?"
 echo ""
@@ -55,7 +68,7 @@ echo ""
 clear
 
 echo "========================================"
-echo "           DOWNLOADING FILES            "
+echo "DOWNLOADING FILES"
 echo "========================================"
 echo ""
 
