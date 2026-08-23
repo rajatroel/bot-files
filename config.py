@@ -76,9 +76,9 @@ try:
     with open(config_path, 'w') as f:
         json.dump(config_data, f, indent=4)
 
-    print("\n" + "-"*42)
-    print("CONFIGURATION SAVED SUCCESSFULLY!")
-    print("-"*42 + "\n")
+    print("\n" + "="*42)
+    print("ALL DONE SUCCESSFULLY")
+    print("="*42 + "\n")
 
 except KeyboardInterrupt:
     print("\n\nSetup cancelled by user. No files were saved.")
@@ -86,9 +86,9 @@ except KeyboardInterrupt:
 except Exception as e:
     print(f"\nAn unexpected error occurred: {e}")
     sys.exit(1)
-    print("\n" + "-"*42)
-    print("CONFIGURATION SAVED SUCCESSFULLY!")
-    print("-"*42 + "\n")
+    print("\n" + "="*42)
+    print("ALL DONE SUCCESSFULLY!")
+    print("="*42 + "\n")
     print("You can now run the main bot installation command.\n")
 
 except KeyboardInterrupt:
