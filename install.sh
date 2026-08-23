@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# BEGIN MAIN INSTALLATION (NO CURL PACKAGE)
+# BEGIN CLEAN INSTALLATION
 # ==========================================
 clear
 echo "=========================================="
@@ -45,21 +45,18 @@ echo "    SETTING UP PACKAGES & DEPENDENCIES    "
 echo "=========================================="
 echo ""
 
-# Prevent any interactive prompts from pausing the script
-export DEBIAN_FRONTEND=noninteractive
-DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
-
-# 1. Clean cache and update package lists safely (Skipping curl package entirely)
+# Update package lists safely without breaking flags
 echo "[1/4] Updating package lists..."
 rm -rf ~/.cache/pip
-pkg update -y $DPKG_OPTS
+pkg update -y
 
-# Install required repositories safely
-pkg install x11-repo tur-repo -y $DPKG_OPTS
+# Install repositories safely one by one
+echo "[2/4] Setting up repositories..."
+pkg install -y x11-repo tur-repo || true
 
 echo ""
-echo "[2/4] Installing system dependencies & packages..."
-pkg install -y $DPKG_OPTS \
+echo "[3/4] Installing system dependencies & packages..."
+pkg install -y \
     python \
     android-tools \
     nano \
@@ -79,7 +76,7 @@ pkg install -y $DPKG_OPTS \
     termux-api
 
 echo ""
-echo "[3/4] Installing Python modules..."
+echo "[4/4] Installing Python modules..."
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
 export CARGO_BUILD_TARGET=aarch64-linux-android
 python -m pip install --upgrade pip setuptools wheel maturin
@@ -87,7 +84,6 @@ pip install pyrogram tgcrypto aiohttp requests
 
 echo ""
 echo "[4/4] Downloading latest bot files using Python..."
-# Using Python instead of curl to download files safely, bypassing any apt/curl link errors
 python3 -c "
 import urllib.request
 base = 'https://raw.githubusercontent.com/rajatroel/bot-files/main/'
