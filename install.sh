@@ -7,32 +7,40 @@ echo "SETTING UP ENVIRONMENT"
 echo "=========================================="
 echo ""
 
-# 1. Storage Permission Loop (Waits for Enter & Verifies)
-echo "[*] Checking storage access..."
+# 1. Storage Permission Loop (Waits for Enter, opens popup, waits for Enter again)
 while ! ls ~/storage/shared >/dev/null 2>&1; do
+    echo "Storage access is required to install the bot."
+    read -r -p "Press [ENTER] to open the permission popup..."
+    
     termux-setup-storage
-    echo "    --> Please click 'ALLOW' on the popup."
-    read -r -p "👉 Press [ENTER] after clicking ALLOW to continue..."
+    sleep 2
+    
+    echo ""
+    read -r -p "Please press [ENTER] one more time to continue..."
     
     # If it fails to read storage after pressing Enter, ask again
     if ! ls ~/storage/shared >/dev/null 2>&1; then
         echo ""
-        echo "⚠️  Storage permission not detected!"
-        echo "   You MUST allow storage access to install the bot."
-        echo "   Let's try again..."
+        echo "Storage permission not detected!"
+        echo "You MUST allow storage access to install the bot."
+        echo "Let's try again..."
         echo ""
     fi
 done
-echo "[✔] Storage access verified!"
+echo "Storage access verified!"
 echo ""
 
-# 2. Open Battery Optimization Settings (Waits for Enter)
-echo "[*] Opening Battery Settings..."
-echo "    --> Set Termux to 'Unrestricted' or 'Don't Optimize'."
+# 2. Open Battery Optimization Settings (Matches the same Enter -> Open -> Enter flow)
+echo "Opening Battery Settings..."
+echo "Set Termux to 'Unrestricted' or 'Don't Optimize'."
+read -r -p "Press [ENTER] to open battery settings..."
+
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
+sleep 2
 
 echo ""
-read -r -p "👉 After changing battery settings, switch back to Termux and press [ENTER] to continue..."
+echo "Have you changed the settings and returned to Termux?"
+read -r -p "Please press [ENTER] one more time to continue..."
 echo ""
 
 echo "=========================================="
