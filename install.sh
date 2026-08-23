@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+# 1. Acquire wake lock immediately for the installation process
+termux-wake-lock
+
+# 2. Persist wake lock in ~/.bashrc so every future Termux session stays awake
+if ! grep -q "termux-wake-lock" ~/.bashrc 2>/dev/null; then
+    echo "termux-wake-lock" >> ~/.bashrc
+fi
+
 # Clear the screen
 clear
 echo "=========================================="
@@ -12,14 +20,14 @@ echo ""
 export DEBIAN_FRONTEND=noninteractive
 DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
 
-# 1. Clean cache and update repositories
+# 3. Clean cache and update repositories
 echo "[1/4] Configuring repositories..."
 rm -rf ~/.cache/pip
 pkg install x11-repo tur-repo -y $DPKG_OPTS
 pkg update -y $DPKG_OPTS
 pkg upgrade -y $DPKG_OPTS
 
-# 2. Install all system dependencies and prebuilt binaries
+# 4. Install all system dependencies and prebuilt binaries
 echo ""
 echo "[2/4] Installing system dependencies & packages..."
 pkg install -y $DPKG_OPTS \
@@ -42,7 +50,7 @@ pkg install -y $DPKG_OPTS \
     termux-api \
     curl
 
-# 3. Setup compile environments and install pip modules
+# 5. Setup compile environments and install pip modules
 echo ""
 echo "[3/4] Installing Python modules..."
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
@@ -50,7 +58,7 @@ export CARGO_BUILD_TARGET=aarch64-linux-android
 python -m pip install --upgrade pip setuptools wheel maturin
 pip install pyrogram tgcrypto aiohttp requests
 
-# 4. Download latest automation & config files
+# 6. Download latest automation & config files
 echo ""
 echo "[4/4] Downloading latest bot files..."
 curl -sL -o automation.py https://raw.githubusercontent.com/rajatroel/bot-files/main/automation.py
