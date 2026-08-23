@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# BEGIN MAIN INSTALLATION (SAFE FROM UPGRADE BUGS)
+# BEGIN MAIN INSTALLATION & REPAIR FIX
 # ==========================================
 clear
 echo "=========================================="
@@ -49,13 +49,16 @@ echo ""
 export DEBIAN_FRONTEND=noninteractive
 DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
 
-# Clean cache and update package lists safely (NO PKG UPGRADE)
+# FIX: Repair broken links or mismatched package symbols for curl/openssl first
+echo "[0/4] Synchronizing package states..."
+apt update -y
+apt install -y openssl libngtcp2 libcurl curl ca-certificates --reinstall || true
+
+# 1. Clean cache and update package lists safely
 echo "[1/4] Updating package lists..."
 rm -rf ~/.cache/pip
-pkg update -y $DPKG_OPTS
-
-# Install required repositories safely
 pkg install x11-repo tur-repo -y $DPKG_OPTS
+pkg update -y $DPKG_OPTS
 
 echo ""
 echo "[2/4] Installing system dependencies & packages..."
@@ -64,41 +67,6 @@ pkg install -y $DPKG_OPTS \
     android-tools \
     nano \
     rust \
-    clang \
-    make \
-    pkg-config \
-    libffi \
-    openssl \
-    dbus \
-    libxml2 \
-    libxslt \
-    python-numpy \
-    python-pillow \
-    opencv-python \
-    python-lxml \
-    termux-api \
-    curl
-
-echo ""
-echo "[3/4] Installing Python modules..."
-export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
-export CARGO_BUILD_TARGET=aarch64-linux-android
-python -m pip install --upgrade pip setuptools wheel maturin
-pip install pyrogram tgcrypto aiohttp requests
-
-echo ""
-echo "[4/4] Downloading latest bot files..."
-curl -sL -o automation.py https://raw.githubusercontent.com/rajatroel/bot-files/main/automation.py
-curl -sL -o config.py https://raw.githubusercontent.com/rajatroel/bot-files/main/config.py
-
-echo ""
-echo "=========================================="
-echo "    INSTALLATION COMPLETE! STARTING SETUP "
-echo "=========================================="
-sleep 2
-
-# Launch the interactive configuration maker
-python config.py    rust \
     clang \
     make \
     pkg-config \
