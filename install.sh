@@ -2,26 +2,31 @@
 set -e
 
 clear
-echo "=========================================="
-echo "SETTING UP ENVIRONMENT"
-echo "=========================================="
+echo "========================================"
+echo "         SETTING UP ENVIRONMENT         "
+echo "========================================"
 echo ""
 
-# 1. Storage Permission Loop (Waits for Enter, opens popup, waits for Enter again)
+# 1. Storage Permission Loop 
 while ! ls ~/storage/shared >/dev/null 2>&1; do
-    echo "Storage permission is required to install the automation."
-    read -r -p "Press [ENTER] to open the permission window..."
+    echo "Storage permission is required"
+    echo "to install the automation."
+    echo ""
+    echo "Press [ENTER] to open the"
+    read -r -p "permission window..."
     
     termux-setup-storage
     
     echo ""
-    read -r -p "Please press [ENTER] one more time to continue..."
+    echo "Please press [ENTER] one more"
+    read -r -p "time to continue..."
     
     # If it fails to read storage after pressing Enter, ask again
     if ! ls ~/storage/shared >/dev/null 2>&1; then
         echo ""
         echo "Storage permission not detected!"
-        echo "You MUST allow storage access to install the bot."
+        echo "You MUST allow storage access"
+        echo "to install the bot."
         echo "Let's try again..."
         echo ""
     fi
@@ -29,23 +34,29 @@ done
 echo "Storage access verified!"
 echo ""
 
-# 2. Open Battery Optimization Settings (Matches the same Enter -> Open -> Enter flow)
+# 2. Open Battery Optimization Settings
 echo "Opening Battery Settings..."
-echo "Set Termux to 'Unrestricted' or 'Don't Optimize'."
-read -r -p "Press [ENTER] to open battery settings..."
+echo "Set Termux to 'Unrestricted'"
+echo "or 'Don't Optimize'."
+echo ""
+echo "Press [ENTER] to open"
+read -r -p "battery settings..."
 
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
 echo ""
-echo "Have you changed the settings and returned to Termux?"
-read -r -p "Please press [ENTER] one more time to continue..."
+echo "Have you changed the settings"
+echo "and returned to Termux?"
+echo ""
+echo "Please press [ENTER] one more"
+read -r -p "time to continue..."
 echo ""
 
 clear
 
-echo "=========================================="
-echo "DOWNLOADING FILES"
-echo "=========================================="
+echo "========================================"
+echo "           DOWNLOADING FILES            "
+echo "========================================"
 echo ""
 
 # 3. Download backup with clean percentage display
@@ -60,7 +71,8 @@ done
 printf "\rDownloading environment : 100.0%% Done!\n"
 
 echo ""
-echo "Extracting system files (Please wait)..."
+echo "Extracting system files"
+echo "(Please wait)..."
 echo ""
 tar -zxf "$HOME/bot.tar.gz" -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 
