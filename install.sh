@@ -83,12 +83,6 @@ python "$HOME/config.py"
 
 # 6. Delete config.py securely once configured
 rm -f "$HOME/config.py"
-
-echo ""
-echo "=========================================="
-echo "INITIAL SETUP FINISHED!"
-echo "=========================================="
-echo ""
 sleep 1
 
 # 7. Launch a fresh shell in home directory
