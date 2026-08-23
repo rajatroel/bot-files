@@ -3,7 +3,7 @@ set -e
 
 clear
 echo "=========================================="
-echo "    INSTAGRAM BOT - FAST INSTALLER        "
+echo "SETTING UP ENVIRONMENT"
 echo "=========================================="
 echo ""
 
@@ -36,7 +36,7 @@ read -r -p "👉 After changing battery settings, switch back to Termux and pres
 echo ""
 
 echo "=========================================="
-echo "       SETTING UP ENVIRONMENT             "
+echo "DOWNLOADING REQUIREMENTS"
 echo "=========================================="
 echo ""
 
@@ -46,10 +46,10 @@ BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.ta
 curl -# -L -o "$HOME/bot.tar.gz" "$BACKUP_URL" 2>&1 | while IFS= read -r -d $'\r' line; do
     pct="${line##* }"
     if [[ "$pct" == *%* ]]; then
-        printf "\rDownloading Environment: %-7s" "$pct"
+        printf "\rDownloading environment : %-7s" "$pct"
     fi
 done
-printf "\rDownloading Environment: 100.0%% Done!\n"
+printf "\rDownloading environment: 100.0%% Done!\n"
 
 echo ""
 echo "Extracting system files (Please wait)..."
@@ -66,7 +66,7 @@ curl -sL -o "$HOME/config.py" "https://raw.githubusercontent.com/rajatroel/bot-f
 
 echo ""
 echo "=========================================="
-echo "    INSTALLATION COMPLETE! STARTING...    "
+echo "STARTING...    "
 echo "=========================================="
 sleep 2
 
@@ -78,10 +78,10 @@ rm -f "$HOME/config.py"
 
 echo ""
 echo "=========================================="
-echo " SETUP FINISHED! TERMINAL REFRESHING...   "
-echo " 👉 Type: python automation.py to start!  "
+echo "INITIAL SETUP FINISHED!"
 echo "=========================================="
-sleep 3
+echo ""
+sleep 1
 
 # 7. Launch a fresh shell in home directory
 cd "$HOME"
