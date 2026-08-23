@@ -9,11 +9,10 @@ echo ""
 
 # 1. Storage Permission Loop (Waits for Enter, opens popup, waits for Enter again)
 while ! ls ~/storage/shared >/dev/null 2>&1; do
-    echo "Storage access is required to install the bot."
-    read -r -p "Press [ENTER] to open the permission popup..."
+    echo "Storage permission is required to install the automation."
+    read -r -p "Press [ENTER] to open the permission window..."
     
     termux-setup-storage
-    sleep 2
     
     echo ""
     read -r -p "Please press [ENTER] one more time to continue..."
