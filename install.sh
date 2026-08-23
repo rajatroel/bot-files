@@ -9,7 +9,7 @@ fi
 
 clear
 echo "=========================================="
-echo "    INSTAGRAM BOT - FAST INSTALLER        "
+echo "SETTING UP ENVIRONMENT"
 echo "=========================================="
 echo ""
 
@@ -22,13 +22,19 @@ fi
 # 3. Open battery optimization settings
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
-# 4. Download and extract pre-configured environment
+# 4. Download backup with clean percentage display
 BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.tar.gz"
 
 echo "Downloading optimized environment..."
-# The -# flag creates a clean progress bar instead of the messy text table!
-curl -# -L -o "$HOME/bot.tar.gz" "$BACKUP_URL"
+curl -# -L -o "$HOME/bot.tar.gz" "$BACKUP_URL" 2>&1 | while IFS= read -r -d $'\r' line; do
+    pct="${line##* }"
+    if [[ "$pct" == *%* ]]; then
+        printf "\rDownloading: %-7s" "$pct"
+    fi
+done
+printf "\rDownloading: 100.0%% Done!\n"
 
+echo ""
 echo "Extracting system files (Please wait)..."
 tar -zxf "$HOME/bot.tar.gz" -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 
@@ -50,7 +56,7 @@ sleep 2
 # 6. Run the setup configuration
 python "$HOME/config.py"
 
-# 7. Delete config.py securely now that config.json is made
+# 7. Delete config.py securely once configured
 rm -f "$HOME/config.py"
 
 echo ""
@@ -60,6 +66,6 @@ echo " 👉 Type: python automation.py to start!  "
 echo "=========================================="
 sleep 3
 
-# 8. Launch a fresh shell so the user is never stuck in a ghost directory
+# 8. Launch a fresh shell in home directory
 cd "$HOME"
 exec bash
