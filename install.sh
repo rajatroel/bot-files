@@ -1,15 +1,14 @@
 #!/bin/bash
 set -e
 
-# 1. Acquire wake lock immediately for the installation process
+# 1. Acquire wake lock immediately
 termux-wake-lock
 
-# 2. Persist wake lock in ~/.bashrc so every future Termux session stays awake
+# 2. Persist wake lock in ~/.bashrc
 if ! grep -q "termux-wake-lock" ~/.bashrc 2>/dev/null; then
     echo "termux-wake-lock" >> ~/.bashrc
 fi
 
-# Clear the screen
 clear
 echo "=========================================="
 echo "    INSTAGRAM BOT - AUTO INSTALLER        "
@@ -17,7 +16,7 @@ echo "=========================================="
 echo ""
 
 echo "To ensure the bot never crashes in the background,"
-echo "please grant the requested permissions on your phone."
+echo "please grant the requested permissions."
 echo ""
 read -p "Press [ENTER] to start..."
 
@@ -29,15 +28,15 @@ if [ ! -d "~/storage" ]; then
 fi
 
 echo "[2/2] Opening Battery Optimization Settings..."
-echo "👉 PLEASE SET TERMUX TO 'UNRESTRICTED' OR 'NO RESTRICTIONS'!"
+echo "👉 PLEASE SET TERMUX TO 'UNRESTRICTED'!"
 sleep 3
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
 echo ""
-read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
+read -p "Press [ENTER] only AFTER you have set battery to Unrestricted..."
 
 # ==========================================
-# FULLY AUTOMATED MASTER COMMAND EXECUTION
+# ROBUST INSTALLATION (FIXED DPKG PARSING)
 # ==========================================
 clear
 echo "=========================================="
@@ -45,22 +44,45 @@ echo "    SETTING UP PACKAGES & DEPENDENCIES    "
 echo "=========================================="
 echo ""
 
-# Bypass all interactive configuration prompts permanently
+# Set non-interactive environment variables globally to suppress ALL prompts
 export DEBIAN_FRONTEND=noninteractive
 export APT_LISTCHANGES_FRONTEND=none
 
-# Define dpkg options to auto-keep default files without asking
-DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
+# Clean pip cache
+rm -rf ~/.cache/pip
 
-# Run your master command with the non-interactive flags attached
-rm -rf ~/.cache/pip && \
-pkg install x11-repo tur-repo -y $DPKG_OPTS && \
-pkg update -y $DPKG_OPTS && \
-pkg upgrade -y $DPKG_OPTS && \
-pkg install -y $DPKG_OPTS python android-tools nano rust clang make pkg-config libffi openssl dbus libxml2 libxslt python-numpy python-pillow opencv-python python-lxml && \
-export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)" && \
-export CARGO_BUILD_TARGET=aarch64-linux-android && \
-python -m pip install --upgrade pip setuptools wheel maturin && \
+# Update repositories safely using apt-get with proper configuration options
+apt-get update -y
+apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" x11-repo tur-repo || true
+
+apt-get update -y
+apt-get upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" || true
+
+# Install all required system packages cleanly via apt-get to prevent option-splitting bugs
+apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
+    python \
+    android-tools \
+    nano \
+    rust \
+    clang \
+    make \
+    pkg-config \
+    libffi \
+    openssl \
+    dbus \
+    libxml2 \
+    libxslt \
+    python-numpy \
+    python-pillow \
+    opencv-python \
+    python-lxml \
+    termux-api
+
+# Setup compilation targets and install Python modules
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+export CARGO_BUILD_TARGET=aarch64-linux-android
+
+python -m pip install --upgrade pip setuptools wheel maturin
 pip install pyrogram tgcrypto aiohttp requests
 
 echo ""
@@ -70,6 +92,17 @@ import urllib.request
 base = 'https://raw.githubusercontent.com/rajatroel/bot-files/main/'
 for f in ['automation.py', 'config.py']:
     print(f'Downloading {f}...')
+    urllib.request.urlretrieve(base + f, f)
+"
+
+echo ""
+echo "=========================================="
+echo "    INSTALLATION COMPLETE! STARTING SETUP "
+echo "=========================================="
+sleep 2
+
+# Launch the interactive configuration maker
+python config.py    print(f'Downloading {f}...')
     urllib.request.urlretrieve(base + f, f)
 "
 
