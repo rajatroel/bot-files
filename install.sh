@@ -45,7 +45,7 @@ while ! ls ~/storage/shared >/dev/null 2>&1; do
 done
 
 # 2. Open Battery Optimization Settings
-echo "Now allow background running."
+echo "Allow background running."
 echo "Set Termux to 'Unrestricted'"
 echo "or 'Don't Optimize'."
 echo ""
