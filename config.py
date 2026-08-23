@@ -15,7 +15,7 @@ print("Please enter your details carefully.")
 print("-"*42)
 
 try:
-    # 1. Get API Credentials
+    # 1. Get API Credentials & License Key
     api_id_input = input("\nEnter your Telegram API ID : \n").strip()
     if not api_id_input.isdigit():
         print("\nError: API ID must contain numbers only. Please run the setup again.")
@@ -25,6 +25,11 @@ try:
     api_hash = input("\nEnter your Telegram API HASH : \n").strip()
     if not api_hash:
         print("\nError: API HASH cannot be empty.")
+        sys.exit(1)
+
+    license_key = input("\nEnter your Automation License Key : \n").strip()
+    if not license_key:
+        print("\nError: License Key cannot be empty.")
         sys.exit(1)
 
     # 2. Get Accounts Dynamically
@@ -62,6 +67,7 @@ try:
     config_data = {
         "api_id": api_id,
         "api_hash": api_hash,
+        "license_key": license_key,
         "accounts": accounts
     }
 
@@ -70,6 +76,17 @@ try:
     with open(config_path, 'w') as f:
         json.dump(config_data, f, indent=4)
 
+    print("\n" + "-"*42)
+    print("CONFIGURATION SAVED SUCCESSFULLY!")
+    print("-"*42 + "\n")
+    print("You can now run 'python bot.py' to start the automation.\n")
+
+except KeyboardInterrupt:
+    print("\n\nSetup cancelled by user. No files were saved.")
+    sys.exit(1)
+except Exception as e:
+    print(f"\nAn unexpected error occurred: {e}")
+    sys.exit(1)
     print("\n" + "-"*42)
     print("CONFIGURATION SAVED SUCCESSFULLY!")
     print("-"*42 + "\n")
