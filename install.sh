@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# STREAMLINED INSTALLATION (NO REPO PACKAGES)
+# STREAMLINED INSTALLATION
 # ==========================================
 clear
 echo "=========================================="
@@ -67,16 +67,15 @@ pkg install -y \
     libxslt \
     python-numpy \
     python-pillow \
-    opencv-python \
     python-lxml \
     termux-api
 
 echo ""
-echo "[3/3] Installing Python modules..."
+echo "[3/3] Installing Python modules (including OpenCV headless)..."
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
 export CARGO_BUILD_TARGET=aarch64-linux-android
 python -m pip install --upgrade pip setuptools wheel maturin
-pip install pyrogram tgcrypto aiohttp requests
+pip install pyrogram tgcrypto aiohttp requests opencv-python-headless
 
 echo ""
 echo "Downloading latest bot files..."
