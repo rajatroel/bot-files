@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# EXACT MASTER COMMAND EXECUTION
+# FULLY AUTOMATED MASTER COMMAND EXECUTION
 # ==========================================
 clear
 echo "=========================================="
@@ -45,11 +45,14 @@ echo "    SETTING UP PACKAGES & DEPENDENCIES    "
 echo "=========================================="
 echo ""
 
-# Prevent any interactive prompts from pausing the script
+# Bypass all interactive configuration prompts permanently
 export DEBIAN_FRONTEND=noninteractive
+export APT_LISTCHANGES_FRONTEND=none
+
+# Define dpkg options to auto-keep default files without asking
 DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
 
-# Run your exact master command line with non-interactive protection
+# Run your master command with the non-interactive flags attached
 rm -rf ~/.cache/pip && \
 pkg install x11-repo tur-repo -y $DPKG_OPTS && \
 pkg update -y $DPKG_OPTS && \
