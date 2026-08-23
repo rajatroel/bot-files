@@ -26,15 +26,16 @@ am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>
 BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.tar.gz"
 
 echo "Downloading optimized environment..."
-curl -L -o "$HOME/bot.tar.gz" "$BACKUP_URL"
+# The -# flag creates a clean progress bar instead of the messy text table!
+curl -# -L -o "$HOME/bot.tar.gz" "$BACKUP_URL"
 
-echo "Extracting system files..."
+echo "Extracting system files (Please wait)..."
 tar -zxf "$HOME/bot.tar.gz" -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 
-# Clean up archive to free space
+# Clean up archive
 rm -f "$HOME/bot.tar.gz"
 
-# 5. Fetch latest bot script files directly
+# 5. Fetch latest bot script files quietly
 echo "Downloading latest bot files..."
 cd "$HOME"
 curl -sL -o "$HOME/automation.py" "https://raw.githubusercontent.com/rajatroel/bot-files/main/automation.py"
@@ -46,5 +47,19 @@ echo "    INSTALLATION COMPLETE! STARTING...    "
 echo "=========================================="
 sleep 2
 
-# Launch configuration
+# 6. Run the setup configuration
 python "$HOME/config.py"
+
+# 7. Delete config.py securely now that config.json is made
+rm -f "$HOME/config.py"
+
+echo ""
+echo "=========================================="
+echo " SETUP FINISHED! TERMINAL REFRESHING...   "
+echo " 👉 Type: python automation.py to start!  "
+echo "=========================================="
+sleep 3
+
+# 8. Launch a fresh shell so the user is never stuck in a ghost directory
+cd "$HOME"
+exec bash
