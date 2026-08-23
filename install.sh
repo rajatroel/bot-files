@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# STREAMLINED INSTALLATION
+# EXACT MASTER COMMAND EXECUTION
 # ==========================================
 clear
 echo "=========================================="
@@ -45,37 +45,20 @@ echo "    SETTING UP PACKAGES & DEPENDENCIES    "
 echo "=========================================="
 echo ""
 
-# Update package lists safely
-echo "[1/3] Updating package lists..."
-rm -rf ~/.cache/pip
-pkg update -y
+# Prevent any interactive prompts from pausing the script
+export DEBIAN_FRONTEND=noninteractive
+DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
 
-echo ""
-echo "[2/3] Installing system dependencies & Python..."
-pkg install -y \
-    python \
-    android-tools \
-    nano \
-    rust \
-    clang \
-    make \
-    pkg-config \
-    libffi \
-    openssl \
-    dbus \
-    libxml2 \
-    libxslt \
-    python-numpy \
-    python-pillow \
-    python-lxml \
-    termux-api
-
-echo ""
-echo "[3/3] Installing Python modules (PyPy/Pip dependencies)..."
-export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
-export CARGO_BUILD_TARGET=aarch64-linux-android
-python -m pip install --upgrade pip setuptools wheel maturin
-pip install pyrogram tgcrypto aiohttp requests opencv-python-headless
+# Run your exact master command line with non-interactive protection
+rm -rf ~/.cache/pip && \
+pkg install x11-repo tur-repo -y $DPKG_OPTS && \
+pkg update -y $DPKG_OPTS && \
+pkg upgrade -y $DPKG_OPTS && \
+pkg install -y $DPKG_OPTS python android-tools nano rust clang make pkg-config libffi openssl dbus libxml2 libxslt python-numpy python-pillow opencv-python python-lxml && \
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)" && \
+export CARGO_BUILD_TARGET=aarch64-linux-android && \
+python -m pip install --upgrade pip setuptools wheel maturin && \
+pip install pyrogram tgcrypto aiohttp requests
 
 echo ""
 echo "Downloading latest bot files..."
