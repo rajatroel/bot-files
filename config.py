@@ -7,9 +7,9 @@ def clear_screen():
     os.system('clear' if os.name == 'posix' else 'cls')
 
 clear_screen()
-print("\n" + "-"*42)
-print("AUTO-CONFIG MAKER")
-print("-"*42)
+print("\n" + "="*42)
+print("CREATE YOUR CONFIG")
+print("="*42)
 print("Let's set up your bot configuration.")
 print("Please enter your details carefully.")
 print("-"*42)
