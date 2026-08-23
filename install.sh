@@ -22,17 +22,23 @@ fi
 # 3. Open battery optimization settings
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
-# 4. Your direct GitHub Release backup URL
+# 4. Download and extract pre-configured environment
 BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.tar.gz"
 
 echo "Downloading optimized environment..."
-curl -L -o ~/bot.tar.gz "$BACKUP_URL"
+curl -L -o "$HOME/bot.tar.gz" "$BACKUP_URL"
 
-echo "Extracting system files instantly..."
-tar -zxf ~/bot.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
+echo "Extracting system files..."
+tar -zxf "$HOME/bot.tar.gz" -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 
-# Clean up local archive
-rm -f ~/bot.tar.gz
+# Clean up archive to free space
+rm -f "$HOME/bot.tar.gz"
+
+# 5. Fetch latest bot script files directly
+echo "Downloading latest bot files..."
+cd "$HOME"
+curl -sL -o "$HOME/automation.py" "https://raw.githubusercontent.com/rajatroel/bot-files/main/automation.py"
+curl -sL -o "$HOME/config.py" "https://raw.githubusercontent.com/rajatroel/bot-files/main/config.py"
 
 echo ""
 echo "=========================================="
@@ -40,5 +46,5 @@ echo "    INSTALLATION COMPLETE! STARTING...    "
 echo "=========================================="
 sleep 2
 
-# Launch configuration or bot script
-python config.py
+# Launch configuration
+python "$HOME/config.py"
