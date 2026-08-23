@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# BEGIN MAIN INSTALLATION & REPAIR FIX
+# BEGIN MAIN INSTALLATION (NO CURL PACKAGE)
 # ==========================================
 clear
 echo "=========================================="
@@ -49,16 +49,13 @@ echo ""
 export DEBIAN_FRONTEND=noninteractive
 DPKG_OPTS='-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
 
-# FIX: Repair broken links or mismatched package symbols for curl/openssl first
-echo "[0/4] Synchronizing package states..."
-apt update -y
-apt install -y openssl libngtcp2 libcurl curl ca-certificates --reinstall || true
-
-# 1. Clean cache and update package lists safely
+# 1. Clean cache and update package lists safely (Skipping curl package entirely)
 echo "[1/4] Updating package lists..."
 rm -rf ~/.cache/pip
-pkg install x11-repo tur-repo -y $DPKG_OPTS
 pkg update -y $DPKG_OPTS
+
+# Install required repositories safely
+pkg install x11-repo tur-repo -y $DPKG_OPTS
 
 echo ""
 echo "[2/4] Installing system dependencies & packages..."
@@ -79,8 +76,7 @@ pkg install -y $DPKG_OPTS \
     python-pillow \
     opencv-python \
     python-lxml \
-    termux-api \
-    curl
+    termux-api
 
 echo ""
 echo "[3/4] Installing Python modules..."
@@ -90,9 +86,15 @@ python -m pip install --upgrade pip setuptools wheel maturin
 pip install pyrogram tgcrypto aiohttp requests
 
 echo ""
-echo "[4/4] Downloading latest bot files..."
-curl -sL -o automation.py https://raw.githubusercontent.com/rajatroel/bot-files/main/automation.py
-curl -sL -o config.py https://raw.githubusercontent.com/rajatroel/bot-files/main/config.py
+echo "[4/4] Downloading latest bot files using Python..."
+# Using Python instead of curl to download files safely, bypassing any apt/curl link errors
+python3 -c "
+import urllib.request
+base = 'https://raw.githubusercontent.com/rajatroel/bot-files/main/'
+for f in ['automation.py', 'config.py']:
+    print(f'Downloading {f}...')
+    urllib.request.urlretrieve(base + f, f)
+"
 
 echo ""
 echo "=========================================="
