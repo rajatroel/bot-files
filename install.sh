@@ -1,63 +1,44 @@
 #!/bin/bash
 set -e
 
-# 1. Acquire wake lock immediately & persist it in .bashrc
+# 1. Acquire wake lock immediately & persist it
 termux-wake-lock
 if ! grep -q "termux-wake-lock" ~/.bashrc 2>/dev/null; then
     echo "termux-wake-lock" >> ~/.bashrc
 fi
 
-# 2. Grant permissions setup prompt
 clear
 echo "=========================================="
-echo "    INSTAGRAM BOT - AUTO INSTALLER        "
+echo "    INSTAGRAM BOT - FAST INSTALLER        "
 echo "=========================================="
 echo ""
-echo "Please grant Storage and Battery permissions if prompted."
-echo ""
-read -p "Press [ENTER] to begin installation..."
 
+# 2. Setup storage permission
 if [ ! -d "~/storage" ]; then
     termux-setup-storage
     sleep 2
 fi
 
+# 3. Open battery optimization settings
 am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
 
-# ==========================================
-# 3. COMPLETELY SUPPRESS ALL PROMPTS & RUN EXACT COMMAND
-# ==========================================
-clear
-echo "Running installation..."
+# 4. Your direct GitHub Release backup URL
+BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.tar.gz"
 
-# These environment variables force apt/dpkg to automatically choose default answers (Option 'N')
-export DEBIAN_FRONTEND=noninteractive
-export APT_LISTCHANGES_FRONTEND=none
+echo "Downloading optimized environment..."
+curl -L -o ~/bot.tar.gz "$BACKUP_URL"
 
-# Run your exact master command line with automatic default-selection options injected
-rm -rf ~/.cache/pip && \
-pkg install x11-repo tur-repo -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && \
-pkg update -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && \
-pkg upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && \
-pkg install python android-tools nano rust clang make pkg-config libffi openssl dbus libxml2 libxslt python-numpy python-pillow opencv-python python-lxml -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" && \
-export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)" && \
-export CARGO_BUILD_TARGET=aarch64-linux-android && \
-python -m pip install --upgrade pip setuptools wheel maturin && \
-pip install pyrogram tgcrypto aiohttp requests
+echo "Extracting system files instantly..."
+tar -zxf ~/bot.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 
-# 4. Download latest bot files and launch configuration
-python3 -c "
-import urllib.request
-base = 'https://raw.githubusercontent.com/rajatroel/bot-files/main/'
-for f in ['automation.py', 'config.py']:
-    print(f'Downloading {f}...')
-    urllib.request.urlretrieve(base + f, f)
-"
+# Clean up local archive
+rm -f ~/bot.tar.gz
 
 echo ""
 echo "=========================================="
-echo "    INSTALLATION COMPLETE! STARTING SETUP "
+echo "    INSTALLATION COMPLETE! STARTING...    "
 echo "=========================================="
 sleep 2
 
+# Launch configuration or bot script
 python config.py
