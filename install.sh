@@ -71,7 +71,7 @@ pkg install -y \
     termux-api
 
 echo ""
-echo "[3/3] Installing Python modules (including OpenCV headless)..."
+echo "[3/3] Installing Python modules (PyPy/Pip dependencies)..."
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
 export CARGO_BUILD_TARGET=aarch64-linux-android
 python -m pip install --upgrade pip setuptools wheel maturin
