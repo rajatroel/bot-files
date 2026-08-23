@@ -37,7 +37,7 @@ echo ""
 read -p "Press [ENTER] only AFTER you have set the battery to Unrestricted..."
 
 # ==========================================
-# BEGIN CLEAN INSTALLATION
+# STREAMLINED INSTALLATION (NO REPO PACKAGES)
 # ==========================================
 clear
 echo "=========================================="
@@ -45,17 +45,13 @@ echo "    SETTING UP PACKAGES & DEPENDENCIES    "
 echo "=========================================="
 echo ""
 
-# Update package lists safely without breaking flags
-echo "[1/4] Updating package lists..."
+# Update package lists safely
+echo "[1/3] Updating package lists..."
 rm -rf ~/.cache/pip
 pkg update -y
 
-# Install repositories safely one by one
-echo "[2/4] Setting up repositories..."
-pkg install -y x11-repo tur-repo || true
-
 echo ""
-echo "[3/4] Installing system dependencies & packages..."
+echo "[2/3] Installing system dependencies & Python..."
 pkg install -y \
     python \
     android-tools \
@@ -76,14 +72,14 @@ pkg install -y \
     termux-api
 
 echo ""
-echo "[4/4] Installing Python modules..."
+echo "[3/3] Installing Python modules..."
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
 export CARGO_BUILD_TARGET=aarch64-linux-android
 python -m pip install --upgrade pip setuptools wheel maturin
 pip install pyrogram tgcrypto aiohttp requests
 
 echo ""
-echo "[4/4] Downloading latest bot files using Python..."
+echo "Downloading latest bot files..."
 python3 -c "
 import urllib.request
 base = 'https://raw.githubusercontent.com/rajatroel/bot-files/main/'
