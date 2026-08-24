@@ -1,12 +1,3 @@
-Based on your screenshot, your GitHub release setup looks absolutely perfect!
-
-Because you uploaded the file `termux.apk` under the `v1.0` release tag in your repository, the permanent, direct download link for your users is:
-`[https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)`
-
-Here is your final, highly polished `README.md` template. It incorporates the direct download link, keeps the instructions incredibly simple, and ensures the user prepares all their data before starting.
-
----
-
 ## 🤖 SMM Kingdom Automation Bot
 
 Welcome to the ultimate Instagram automation setup. Please read these basic requirements carefully before starting. If you miss a step, the bot will not work!
