@@ -118,14 +118,5 @@ if ! grep -q "python automation.py" "$HOME/.bashrc" 2>/dev/null; then
     echo "python automation.py" >> "$HOME/.bashrc"
 fi
 
-# 9. Launch a fresh shell in home directory (this triggers .bashrc automatically for the OTP login)
-echo ""
-echo "========================================"
-echo "SETUP COMPLETE!"
-echo "Launching bot for initial login..."
-echo "========================================"
-echo ""
-sleep 2
-
 cd "$HOME"
 exec bash
