@@ -44,31 +44,6 @@ while ! ls ~/storage/shared >/dev/null 2>&1; do
     fi
 done
 
-# 2. Open Battery Optimization Settings
-echo "Allow background running."
-echo "Set Termux to 'Unrestricted'"
-echo "or 'Don't Optimize'."
-echo ""
-echo "Press [ENTER] to open"
-read -r -p "battery settings..."
-
-am start -a android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS > /dev/null 2>&1 || true
-
-sleep 2
-
-clear
-    echo "========================================"
-    echo "SETTING UP PERMISSIONS"
-    echo "========================================"
-    echo ""
-
-echo "Have you changed the settings"
-echo "and returned to Termux?"
-echo ""
-echo "Please press [ENTER] one more"
-read -r -p "time to continue..."
-echo ""
-
 clear
 
 echo "========================================"
