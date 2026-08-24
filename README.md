@@ -24,29 +24,34 @@ You need your own Telegram API keys to connect the bot safely:
 
 **Step 1: Install the Required Apps**
 * **First App (Termux):** **[Click Here to Download Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)**. Install the downloaded APK file on your phone. *(Strictly download it from this link—do not use the Play Store version!)*
-* **Second App (MacroDroid):** Download **MacroDroid** from the Google Play Store. Open it and allow all the initial permissions it asks for.
+* **Second App (MacroDroid):** **[Click Here to Download MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**. Install it from the Google Play Store.
 
-**Step 2: Launch the Setup**
-* Open Termux, paste the exact command below, and press Enter:
+**Step 2: Import the Bot Macro & Start Permissions**
+* **[Click Here to Download the Bot Macro]** *(Insert your raw macro link here)*
+* Open MacroDroid, navigate to the **Export/Import** tab, and import the `backup.mdr` file you just downloaded.
+* Turn the main switch at the top right of MacroDroid to **ON**.
+* Follow the on-screen popups to enable the **Alarms**, **Battery**, and **Accessibility** permissions. 
+* Once the permissions are granted, MacroDroid will automatically launch Termux for you!
+
+**Step 3: Launch the Setup in Termux**
+* Inside Termux, paste the exact command below and press Enter:
 
   curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh | bash
 
-* The setup will launch and ask for storage permission. Click **Allow**. The script will automatically detect it and start downloading your files.
+* When the storage permission popup appears, click **Allow**. The setup will automatically detect it and start downloading your files.
 
-**Step 3: Enter Your Details**
-* When prompted, type or paste your details in this exact order: your **API ID**, your **API Hash**, and then your **License Key**. 
-* Next, enter your Instagram account names one by one. 
+**Step 4: Enter Your Details**
+* When prompted, type or paste your details in this exact order: your **API ID**, your **API Hash**, and then your **License Key**.
+* Next, enter your Instagram account names one by one.
 * When you are completely done entering accounts, simply hit **Enter** on a blank line to finish!
 
-**Step 4: The Final Authentication**
-* Since this is your very first time running the bot, it will ask for your phone number and an OTP. 
-* Make sure you enter this exactly as it appears in your Telegram login! 
+**Step 5: The Final Authentication**
+* Since this is your very first time running the bot, it will ask for your phone number and an OTP.
+* Make sure you enter this exactly as it appears in your Telegram login!
 
-**Step 5: Boom! You're Live**
-* Once the screen says *"Automation and bot restarted"*, boom! Your automation has officially started. 
-* Open MacroDroid, import the Bot Macro *(Insert your raw macro link here)*, and turn the main switch at the top right to **ON**. 
-* Follow the on-screen popups to enable the final Alarms, Battery, and Accessibility permissions. That's it—let the automation work for you!
+**Step 6: Boom! You're Live**
+* Once the screen says *"Automation and bot restarted"*, boom! Your automation has officially started. Let the automation work for you!
 
 **🛑 How to Stop & Restart**
-* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. However, you must also open MacroDroid and manually toggle the main switch to **OFF**.
-* **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the switch, and follow the on-screen instructions!
+* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. Then open MacroDroid and manually toggle the main switch to **OFF**.
+* **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the switch, and let the automation take over!
