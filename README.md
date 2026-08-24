@@ -28,34 +28,37 @@ You need your own Telegram API keys to connect the bot safely:
 
 **Step 2: Import the Macro File**
 * **[Click Here to Download the latest Macro file](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)**
-* Open MacroDroid, navigate to the **Export/Import** tile, and check the box for **Reset variables on import**. 
-* Tap **Storage** under the import section, navigate to your Download folder, and select the `backup.mdr` file you just downloaded.
-* Tap **Clear existing and import all**, then grant all 4 special permissions it asks for. 
-* Afterward, restart MacroDroid by turning the toggle at the top right OFF and ON again. It will ask for a few more necessary permissions—allow every single one. 
+* Open MacroDroid, navigate to the **Export/Import** tile, and check the box for **Reset variables on import**.
+* Tap **Storage** under the import section, navigate to your Downloads folder, and select the `backup.mdr` file you just downloaded.
+* Tap **Clear existing and import all**, then grant all 4 special permissions it asks for.
+* Afterward, restart MacroDroid by turning the toggle at the top right OFF and ON again. It will ask for a few more necessary permissions—allow every single one.
 * Once the permissions are granted, MacroDroid will automatically launch Termux for you!
 
 **Step 3: Launch the Setup in Termux**
-* Inside Termux, paste the exact command below and press Enter:
+* Inside Termux, copy and paste the command below and press Enter:
 
-  ```bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)```
+```bash
+bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
+```
 
-* When the storage permission popup appears, click **Allow** and go back to Termux. The setup will automatically detect it and start downloading your files.
+* When the storage permission popup appears, tap **Allow** and return to Termux. The setup will automatically detect it and start downloading your files.
 
 **Step 4: Enter Your Details**
-* When prompted, type or paste your details in this exact order, pressing **Enter** after each one: your **API ID**, your **API Hash**, and then your **License Key**.
+* When prompted, enter your details in this exact order, pressing **Enter** after each: your **API ID**, your **API Hash**, and then your **License Key**.
 * Next, enter your Instagram account names one by one, pressing **Enter** after each name.
-* When you are completely done entering accounts, simply hit **Enter** on a blank line to finish! Your automation will now begin to start.
+* When you are completely done entering accounts, simply hit **Enter** on an empty line to finish! Your automation will now begin to start.
 
 **Step 5: The Final Authentication**
 * Since this is your very first time running the bot, it will ask for your phone number and an OTP.
 * Make sure you enter this exactly as it appears in your Telegram login!
 
 **Step 6: Boom! You're Live**
-* Once the screen says *"Bot is restarted"*, boom! Your automation has officially started. Let the automation work for you, and **do not touch your phone** while tasks are performing!
+* Once the screen says *"Bot is restarted"*, boom! Your automation has officially started. Let the automation work for you, and **do not touch your phone** while tasks are running!
 
 ---
 
 ### 🛑 Important Things to Remember
-* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. (If the notification is not appearing, simply close Termux from your recent apps and open it again (it will appear). Finally, open MacroDroid and manually toggle the main switch to **OFF**.
+* **To Stop:** Pull down your phone's notification panel and tap **Exit** on the Termux notification. This will automatically terminate the automation. (If the notification is not visible, simply close Termux from your Recent Apps screen and reopen it—the notification will reappear). Finally, open MacroDroid and toggle the main switch to **OFF**.
 * **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the main switch, and let the automation take over!
-* **Must Read:** Lock termux and macrodroid in your recent tab so they can't be kill by notorious background killer. **[Contact the developer](https://t.me/iamrajatroel)** to get the license key or to submit your feedback and get updates.
+* **Must Read:** Lock both **Termux** and **MacroDroid** in your Recent Apps / App Switcher tray to prevent Android's background manager from closing them.
+* **Support & Updates:** **[Contact the developer](https://t.me/iamrajatroel)** to obtain your license key, submit feedback, or get the latest updates.
