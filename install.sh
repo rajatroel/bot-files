@@ -12,27 +12,10 @@ while ! ls ~/storage/shared >/dev/null 2>&1; do
     echo "Storage permission is required"
     echo "to install the automation."
     echo ""
-    echo "Press [ENTER] to open the"
-    read -r -p "permission window..."
-
-    clear
-    echo "========================================"
-    echo "SETTING UP PERMISSIONS"
-    echo "========================================"
-    echo ""
 
     termux-setup-storage
     
-    sleep 2
-    
-    echo "Please press [ENTER] one more"
-    read -r -p "time to continue..."
-
-    clear
-    echo "========================================"
-    echo "SETTING UP PERMISSIONS"
-    echo "========================================"
-    echo ""
+    sleep 3
     
     # If it fails to read storage after pressing Enter, ask again
     if ! ls ~/storage/shared >/dev/null 2>&1; then
