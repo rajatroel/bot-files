@@ -7,7 +7,7 @@ cd "$HOME"
 curl -sL -o "$HOME/config.py" "https://raw.githubusercontent.com/rajatroel/bot-files/main/config.py"
 
 # 2. Run it to overwrite config.json
-python "$HOME/config.py"
+python "$HOME/config.py" < /dev/tty
 
 # 3. Clean up
 rm -f "$HOME/config.py"
