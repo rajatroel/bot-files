@@ -1,8 +1,17 @@
-SMM Kingdom Tasks Automation
+Based on your screenshot, your GitHub release setup looks absolutely perfect!
 
-Welcome to the ultimate Instagram automation setup. Please read these basic requirements carefully before starting. If you miss a step, the bot will not work accurately!
+Because you uploaded the file `termux.apk` under the `v1.0` release tag in your repository, the permanent, direct download link for your users is:
+`[https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)`
 
-### Basic Requirements & Conditions
+Here is your final, highly polished `README.md` template. It incorporates the direct download link, keeps the instructions incredibly simple, and ensures the user prepares all their data before starting.
+
+---
+
+## 🤖 SMM Kingdom Automation Bot
+
+Welcome to the ultimate Instagram automation setup. Please read these basic requirements carefully before starting. If you miss a step, the bot will not work!
+
+### ⚠️ Basic Requirements & Conditions
 
 * **Language:** Your Android system language MUST be set to **English (US or UK)**. The bot navigates by reading English text on the screen.
 * **Permissions:** You MUST allow all requested permissions (Storage, Alarms, Battery, and Accessibility). The bot requires these to run reliably in the background without Android freezing it.
