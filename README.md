@@ -1,4 +1,4 @@
-## 🤖 Smm Kingdom Tasks Automation Bot
+## 🤖 SMM Kingdom Tasks Automation Bot
 
 Welcome to the ultimate Instagram automation setup. Please read these basic requirements carefully before starting. If you miss a step, the bot will not work correctly!
 
@@ -16,7 +16,7 @@ You need your own Telegram API keys to connect the bot safely:
 2. Log in with your Telegram phone number (you will get a login code inside the Telegram app).
 3. Tap on **API development tools**.
 4. Fill in a random app name and short name, then click Create.
-5. Copy your **API ID** (numbers only) and **API Hash** (long mix of letters/numbers) and save them securely in your Notes app don't share them with anyone.
+5. Copy your **API ID** (numbers only) and **API Hash** (long mix of letters/numbers) and save them securely in your Notes app. **Do not share them with anyone.**
 
 ---
 
@@ -26,31 +26,38 @@ You need your own Telegram API keys to connect the bot safely:
 * **First App (Termux):** **[Click Here to Download Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)**. Install the downloaded APK file on your phone. *(Strictly download it from this link—do not use the Play Store version!)*
 * **Second App (MacroDroid):** **[Click Here to Download MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**. Install it from the Google Play Store.
 
-**Step 2: Import the Macros file**
-* **[Click Here to Download the latest Macros file](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)**
-* Open MacroDroid, navigate to the **Export/Import** tile, and check the box for reset variables on import then press storage under import section then navigate to download folder and select the `backup.mdr` file you just downloaded.
-* Now click clear existing and import all then give it all 4 special permissions. After it just restart it via the above toggle, it will ask you more necessary permission just allow it every single permission. Once the permissions are granted, MacroDroid will automatically launch Termux for you!
+**Step 2: Import the Macro File**
+* **[Click Here to Download the latest Macro file](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)**
+* Open MacroDroid, navigate to the **Export/Import** tile, and check the box for **Reset variables on import**. 
+* Tap **Storage** under the import section, navigate to your Download folder, and select the `backup.mdr` file you just downloaded.
+* Tap **Clear existing and import all**, then grant all 4 special permissions it asks for. 
+* Afterward, restart MacroDroid by turning the toggle at the top right OFF and ON again. It will ask for a few more necessary permissions—allow every single one. 
+* Once the permissions are granted, MacroDroid will automatically launch Termux for you!
 
 **Step 3: Launch the Setup in Termux**
 * Inside Termux, paste the exact command below and press Enter:
 
-  curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh | bash
+  ```bash
+  curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh) | bash
+  ```
 
-* When the storage permission popup appears, click **Allow** and go back to termux. The setup will automatically detect it and start downloading your files.
+* When the storage permission popup appears, click **Allow** and go back to Termux. The setup will automatically detect it and start downloading your files.
 
 **Step 4: Enter Your Details**
-* When prompted, type or paste your details in this exact order: your **API ID**, press enter your **API Hash**, press enter and then your **License Key**. press enter
-* Next, enter your Instagram account names one by one and after each name press enter.
-* When you are completely done entering accounts, simply hit **Enter** on a blank line to finish! You automation will start.
+* When prompted, type or paste your details in this exact order, pressing **Enter** after each one: your **API ID**, your **API Hash**, and then your **License Key**.
+* Next, enter your Instagram account names one by one, pressing **Enter** after each name.
+* When you are completely done entering accounts, simply hit **Enter** on a blank line to finish! Your automation will now begin to start.
 
 **Step 5: The Final Authentication**
 * Since this is your very first time running the bot, it will ask for your phone number and an OTP.
 * Make sure you enter this exactly as it appears in your Telegram login!
 
 **Step 6: Boom! You're Live**
-* Once the screen says *"Bot is restarted"*, boom! Your automation has officially started. Let the automation work for you, don't touch you phone while tasks are performing!
+* Once the screen says *"Bot is restarted"*, boom! Your automation has officially started. Let the automation work for you, and **do not touch your phone** while tasks are performing!
 
-**🛑 Important Things to remember**
-* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation, If the notification is not appearing just close termux from recent and open it again it will appear. Then open MacroDroid and manually toggle the main switch to **OFF**.
-* **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the switch, and let the automation take over!
-* **To get License Key & ask for updates:** Contact the developer by clicking here (@iamrajatroel)!
+---
+
+### 🛑 Important Things to Remember
+* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. (If the notification is not appearing, simply close Termux from your recent apps and open it again—it will appear). Finally, open MacroDroid and manually toggle the main switch to **OFF**.
+* **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the main switch, and let the automation take over!
+* **To get a License Key & ask for updates:** **[Contact the developer by clicking here (@iamrajatroel)](https://t.me/iamrajatroel)**!
