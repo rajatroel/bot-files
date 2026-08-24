@@ -7,26 +7,39 @@ echo "SETTING UP PERMISSIONS"
 echo "========================================"
 echo ""
 
-# 1. Storage Permission Loop 
-while ! ls ~/storage/shared >/dev/null 2>&1; do
+# 1. Storage Permission Auto-Detect Loop
+while [ ! -d "$HOME/storage/shared" ]; do
     echo "Storage permission is required"
     echo "to install the automation."
-    echo ""
-
+    
+    # Fire the Android permission popup
     termux-setup-storage
     
-    sleep 3
+    echo -n "Waiting for you to click 'Allow'"
     
-    # If it fails to read storage after pressing Enter, ask again
-    if ! ls ~/storage/shared >/dev/null 2>&1; then
-        echo "Storage permission not detected!"
-        echo "You MUST allow storage access"
-        echo "to install the bot."
-        echo "Let's try again..."
+    # Check automatically every 1 second (up to 15 seconds)
+    for i in {1..15}; do
+        if [ -d "$HOME/storage/shared" ]; then
+            break # Instantly break the timer if granted!
+        fi
+        echo -n "."
+        sleep 1
+    done
+    
+    echo "" # Print a new line after the dots
+    
+    # If the folder still isn't readable, they likely clicked Deny
+    if [ ! -d "$HOME/storage/shared" ]; then
         echo ""
+        echo "❌ Storage permission not detected!"
+        echo "If you clicked 'Deny', we must try again."
+        echo "========================================"
+        sleep 2
     fi
 done
 
+echo "✅ Storage permission granted!"
+sleep 1
 clear
 
 echo "========================================"
@@ -61,16 +74,12 @@ curl -sL -o "$HOME/automation.py" "https://raw.githubusercontent.com/rajatroel/b
 curl -sL -o "$HOME/config.py" "https://raw.githubusercontent.com/rajatroel/bot-files/main/config.py"
 
 # 5. Run the setup configuration
-python "$HOME/config.py"
+python "$HOME/config.py" </dev/tty
 
 # 6. Delete config.py securely once configured
 rm -f "$HOME/config.py"
 
-# 7. Acquire wakelock to prevent Android from killing Termux in the background
-echo "Acquiring wakelock..."
-termux-wake-lock
-
-# 8. Add automation.py to .bashrc so it runs on every fresh Termux launch
+# 7. Add automation.py to .bashrc so it runs on every fresh Termux launch
 echo "Configuring auto-start..."
 if ! grep -q "python automation.py" "$HOME/.bashrc" 2>/dev/null; then
     echo "python automation.py" >> "$HOME/.bashrc"
