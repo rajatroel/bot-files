@@ -16,7 +16,7 @@ You need your own Telegram API keys to connect the bot safely:
 2. Log in with your Telegram phone number (you will get a login code inside the Telegram app).
 3. Tap on **API development tools**.
 4. Fill in a random app name and short name, then click Create.
-5. Copy your **API ID** (numbers only) and **API Hash** (long mix of letters/numbers) and save them in your Notes app.
+5. Copy your **API ID** (numbers only) and **API Hash** (long mix of letters/numbers) and save them securely in your Notes app don't share them with anyone.
 
 ---
 
