@@ -1,4 +1,4 @@
-## 🤖 SMM Kingdom Automation Bot
+## 🤖 SMM Kingdom Tasks Automation Bot
 
 Welcome to the ultimate Instagram automation setup. Please read these basic requirements carefully before starting. If you miss a step, the bot will not work correctly!
 
