@@ -37,9 +37,7 @@ You need your own Telegram API keys to connect the bot safely:
 **Step 3: Launch the Setup in Termux**
 * Inside Termux, paste the exact command below and press Enter:
 
-  ```bash
-  curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh) | bash
-  ```
+  ```bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)```
 
 * When the storage permission popup appears, click **Allow** and go back to Termux. The setup will automatically detect it and start downloading your files.
 
