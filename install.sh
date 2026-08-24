@@ -108,6 +108,24 @@ python "$HOME/config.py"
 # 6. Delete config.py securely once configured
 rm -f "$HOME/config.py"
 
-# 7. Launch a fresh shell in home directory
+# 7. Acquire wakelock to prevent Android from killing Termux in the background
+echo "Acquiring wakelock..."
+termux-wake-lock
+
+# 8. Add automation.py to .bashrc so it runs on every fresh Termux launch
+echo "Configuring auto-start..."
+if ! grep -q "python automation.py" "$HOME/.bashrc" 2>/dev/null; then
+    echo "python automation.py" >> "$HOME/.bashrc"
+fi
+
+# 9. Launch a fresh shell in home directory (this triggers .bashrc automatically for the OTP login)
+echo ""
+echo "========================================"
+echo "SETUP COMPLETE!"
+echo "Launching bot for initial login..."
+echo "========================================"
+echo ""
+sleep 2
+
 cd "$HOME"
 exec bash
