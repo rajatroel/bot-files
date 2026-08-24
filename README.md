@@ -26,7 +26,7 @@ You need your own Telegram API keys to connect the bot safely:
 * **First App (Termux):** **[Click Here to Download Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)**. Install the downloaded APK file on your phone. *(Strictly download it from this link—do not use the Play Store version!)*
 * **Second App (MacroDroid):** **[Click Here to Download MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**. Install it from the Google Play Store.
 
-**Step 2: Import the Macros file & Start Permissions**
+**Step 2: Import the Macros file**
 * **[Click Here to Download the Macros file](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)**
 * Open MacroDroid, navigate to the **Export/Import** tab, and import the `backup.mdr` file you just downloaded.
 * Turn the main switch at the top right of MacroDroid to **ON**.
