@@ -31,14 +31,14 @@ while [ ! -d "$HOME/storage/shared" ]; do
     # If the folder still isn't readable, they likely clicked Deny
     if [ ! -d "$HOME/storage/shared" ]; then
         echo ""
-        echo "Storage permission not detected!"
+        echo "❌ Storage permission not detected!"
         echo "If you clicked 'Deny', we must try again."
         echo "========================================"
         sleep 2
     fi
 done
 
-echo "Storage permission granted!"
+echo "✅ Storage permission granted!"
 sleep 1
 clear
 
@@ -78,7 +78,11 @@ python "$HOME/config.py" </dev/tty
 # 6. Delete config.py securely once configured
 rm -f "$HOME/config.py"
 
-# 7. Add automation.py to .bashrc so it runs on every fresh Termux launch
+# 7. Add wake lock and automation.py to .bashrc so they run on every fresh Termux launch
+if ! grep -q "termux-wake-lock" "$HOME/.bashrc" 2>/dev/null; then
+    echo "termux-wake-lock" >> "$HOME/.bashrc"
+fi
+
 if ! grep -q "python automation.py" "$HOME/.bashrc" 2>/dev/null; then
     echo "python automation.py" >> "$HOME/.bashrc"
 fi
