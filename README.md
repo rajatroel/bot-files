@@ -27,7 +27,7 @@ You need your own Telegram API keys to connect the bot safely:
 * **Second App (MacroDroid):** **[Click Here to Download MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**. Install it from the Google Play Store.
 
 **Step 2: Import the Bot Macro & Start Permissions**
-* **[Click Here to Download the Bot Macro]** *(https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)*
+* **[Click Here to Download the Bot Macro](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)**
 * Open MacroDroid, navigate to the **Export/Import** tab, and import the `backup.mdr` file you just downloaded.
 * Turn the main switch at the top right of MacroDroid to **ON**.
 * Follow the on-screen popups to enable the **Alarms**, **Battery**, and **Accessibility** permissions. 
