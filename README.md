@@ -58,6 +58,6 @@ You need your own Telegram API keys to connect the bot safely:
 ---
 
 ### 🛑 Important Things to Remember
-* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. (If the notification is not appearing, simply close Termux from your recent apps and open it again—it will appear). Finally, open MacroDroid and manually toggle the main switch to **OFF**.
+* **To Stop:** Pull down your phone's notification center and tap **Exit** on the Termux notification. This will automatically kill the automation. (If the notification is not appearing, simply close Termux from your recent apps and open it again (it will appear). Finally, open MacroDroid and manually toggle the main switch to **OFF**.
 * **To Restart:** Whenever you want to run the bot again, just open MacroDroid, enable the main switch, and let the automation take over!
 * **Must Read:** Lock termux and macrodroid in your recent tab so they can't be kill by notorious background killer. **[Contact the developer](https://t.me/iamrajatroel)** to get the license key or to submit your feedback and get updates.
