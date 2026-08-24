@@ -4,7 +4,7 @@ Welcome to the ultimate Instagram automation setup. Please read these basic requ
 
 ### ⚠️ Basic Requirements & Conditions
 * **Language:** Your Android system language MUST be set to **English (US or UK)**. Alternatively, you can manually set the language for the **Chrome** and **Instagram** apps to English in your phone's settings. Additionally, your **Telegram bot language** must also be set to English.
-* **Permissions:** You MUST allow all requested permissions (Storage, Alarms, Battery, and Accessibility). The bot requires these to run reliably in the background without Android freezing it.
+* **Permissions:** You MUST allow all requested permissions (Notification, Storage, Alarms, Battery, and Accessibility or whatever it asks for). The bot requires these to run reliably in the background without Android freezing it.
 * **Instagram:** Make sure you are already logged into your required VIP accounts on the official Instagram app, and ensure they are available in your SMM Kingdom tasks bot.
 
 ### 📝 Prepare Your Data
