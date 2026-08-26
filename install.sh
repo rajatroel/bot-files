@@ -43,13 +43,29 @@ sleep 1
 clear
 
 echo "========================================"
+echo "DETECTING DEVICE ARCHITECTURE"
+echo "========================================"
+echo ""
+
+# 2. Dynamic Architecture Detection
+ARCH=$(uname -m)
+echo "Detected architecture: $ARCH"
+
+if [[ "$ARCH" == "aarch64" || "$ARCH" == "x86_64" ]]; then
+    echo "Selecting 64-bit installation..."
+    BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/termux-64bit-backup.tar.gz"
+else
+    echo "Selecting 32-bit installation..."
+    BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/termux-32bit-backup.tar.gz"
+fi
+
+echo ""
+echo "========================================"
 echo "DOWNLOADING FILES"
 echo "========================================"
 echo ""
 
 # 3. Download backup with clean percentage display
-BACKUP_URL="https://github.com/rajatroel/bot-files/releases/download/v1.0/bot.tar.gz"
-
 curl -# -L -o "$HOME/bot.tar.gz" "$BACKUP_URL" 2>&1 | while IFS= read -r -d $'\r' line; do
     pct="${line##* }"
     if [[ "$pct" == *%* ]]; then
