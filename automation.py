@@ -29,13 +29,38 @@ TARGET_CHAT = "@SmmKingdomTasksBot"
 AI_PROXY_URL = "https://captcha-solver.imrajatroel.workers.dev"
 # ==========================================
 
+def get_device_info():
+    try:
+        # Pull real phone model, Android OS version, and CPU architecture
+        model = subprocess.check_output(["getprop", "ro.product.model"]).decode("utf-8").strip()
+        android_ver = subprocess.check_output(["getprop", "ro.build.version.release"]).decode("utf-8").strip()
+        abi = subprocess.check_output(["getprop", "ro.product.cpu.abi"]).decode("utf-8").strip()
+    except Exception:
+        model = "Android Device"
+        android_ver = "10"
+        abi = "arm64-v8a"
+
+    # Match architecture dynamically (32-bit vs 64-bit)
+    if "arm64" in abi or "aarch64" in abi:
+        arch_suffix = "arm64-v8a"
+    elif "v7" in abi or "armeabi" in abi:
+        arch_suffix = "armeabi-v7a"
+    else:
+        arch_suffix = "arm64-v8a"
+
+    device_model = model if model else "Android Device"
+    system_version = f"Android {android_ver}" if android_ver else "Android 10"
+    app_version = f"0.28.11.1805-{arch_suffix}"
+
+    return device_model, system_version, app_version
+    
 # LOAD EXTERNAL CONFIGURATION
 try:
     with open(os.path.expanduser('~/config.json'), 'r') as f:
         config = json.load(f)
         
-    API_ID = int(config["api_id"])
-    API_HASH = config["api_hash"]
+    API_ID = 21724
+    API_HASH = "3e0cb5efcd52300aec5994e2f4916cbd"
     LICENSE_KEY = config.get("license_key", "NONE")
     accounts = config["accounts"]
     
@@ -62,8 +87,18 @@ pending_task = None
 pending_text = None
 bot_replied_event = asyncio.Event()
 
-app = Client(os.path.expanduser('~/userbot'), api_id=API_ID, api_hash=API_HASH)
+# UPDATED CODE:
+my_model, my_system, my_app_version = get_device_info()
 
+app = Client(
+    os.path.expanduser('~/userbot'),
+    api_id=API_ID,
+    api_hash=API_HASH,
+    device_model=my_model,
+    system_version=my_system,
+    app_version=my_app_version,
+    lang_code="en"
+)
 # ==========================================
 # MACRODROID WEBHOOK & INTENT SERVER
 # ==========================================
