@@ -59,8 +59,8 @@ try:
     with open(os.path.expanduser('~/config.json'), 'r') as f:
         config = json.load(f)
         
-    API_ID = 6
-    API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+    #API_ID = 6
+    #API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
     LICENSE_KEY = config.get("license_key", "NONE")
     accounts = config["accounts"]
     
