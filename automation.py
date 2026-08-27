@@ -3,8 +3,6 @@ import asyncio
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 
-from pyrogram.raw.functions.messages import DeleteHistory
-
 import random
 import json
 import sys
@@ -17,9 +15,12 @@ import subprocess
 import requests
 from datetime import datetime, timedelta
 
+import qrcode
+from telethon import TelegramClient, events, errors
+from telethon.tl.functions.messages import DeleteHistoryRequest
+from telethon.tl.types import MessageEntityTextUrl
+
 from aiohttp import web
-from pyrogram import Client, filters, idle
-from pyrogram.enums import ParseMode, MessageEntityType
 from PIL import Image
 import cv2
 import numpy as np
@@ -62,7 +63,77 @@ pending_task = None
 pending_text = None
 bot_replied_event = asyncio.Event()
 
-app = Client(os.path.expanduser('~/userbot'), api_id=API_ID, api_hash=API_HASH)
+client = TelegramClient(os.path.expanduser('~/userbot'), API_ID, API_HASH)
+
+def open_qr_image(img_path):
+    try:
+        # 1. Try ZArchiver (Free version)
+        res_free = subprocess.run(
+            ["am", "start", "-a", "android.intent.action.VIEW", "-d", f"file://{img_path}", "-t", "image/png", "-p", "ru.zdevs.zarchiver"],
+            capture_output=True, text=True
+        )
+        # Android's Activity Manager outputs "Error" if the package isn't installed
+        if "Error" not in res_free.stderr and "Error" not in res_free.stdout:
+            return
+
+        # 2. Try ZArchiver (Pro version)
+        res_pro = subprocess.run(
+            ["am", "start", "-a", "android.intent.action.VIEW", "-d", f"file://{img_path}", "-t", "image/png", "-p", "ru.zdevs.zarchiver.pro"],
+            capture_output=True, text=True
+        )
+        if "Error" not in res_pro.stderr and "Error" not in res_pro.stdout:
+            return
+            
+    except Exception:
+        pass
+        
+    # 3. Universal Failsafe (Default Gallery/Chooser) if ZArchiver is missing
+    os.system(f"termux-open {img_path} > /dev/null 2>&1")
+
+
+async def login_via_qr():
+    await client.connect()
+
+    if not await client.is_user_authorized():
+        qr_login = await client.qr_login()
+
+        while True:
+            # 1. Generate clean QR Code image
+            qr = qrcode.QRCode(version=1, box_size=10, border=4)
+            qr.add_data(qr_login.url)
+            qr.make(fit=True)
+            
+            img_path = "/sdcard/login_qr.png"
+            img = qr.make_image(fill_color="black", back_color="white")
+            img.save(img_path)
+
+            # 2. POP OPEN IN ZARCHIVER (OR FALLBACK)
+            open_qr_image(img_path)
+
+            print("\n========================================")
+            print("       QR CODE OPENED ON SCREEN         ")
+            print("========================================")
+            print("Scan the image showing on your screen with your other phone!")
+            print("Waiting for scan (timeout 30s)...")
+
+            try:
+                # Wait for user to scan (30s timeout per QR token)
+                await qr_login.wait(timeout=30)
+                break  # Logged in successfully without 2FA
+            except errors.SessionPasswordNeededError:
+                # Account has 2FA enabled: prompt for password
+                pwd = input("\n[!] 2FA Cloud Password detected. Enter your password: ")
+                await client.sign_in(password=pwd)
+                break
+            except asyncio.TimeoutError:
+                print("\n[!] QR code expired. Refreshing on screen...")
+                await qr_login.recreate()
+
+        # Clean up the image file after successful login
+        if os.path.exists(img_path):
+            os.remove(img_path)
+            
+        print("\n✅ Logged in successfully! Session saved inside Termux.")
 
 # ==========================================
 # MACRODROID WEBHOOK & INTENT SERVER
@@ -150,7 +221,7 @@ async def smart_send(text_to_send):
     for attempt in range(1, 3): 
         bot_replied_event.clear() 
         print(f"Clicking : {text_to_send} (Attempt {attempt}/2)")
-        await app.send_message(TARGET_CHAT, text_to_send, parse_mode=ParseMode.DISABLED)
+        await client.send_message(TARGET_CHAT, text_to_send, parse_mode=None, link_preview=False)
         
         try:
             await asyncio.wait_for(bot_replied_event.wait(), timeout=60.0)
@@ -177,7 +248,7 @@ async def smart_send_photo():
         print(f"Uploading screenshot... (Attempt {attempt}/2)")
         
         try:
-            await app.send_photo(TARGET_CHAT, photo=photo_path)
+            await client.send_file(TARGET_CHAT, photo_path)
             await asyncio.wait_for(bot_replied_event.wait(), timeout=60.0)
             print("Bot replied successfully after photo upload!")
             return True
@@ -250,8 +321,9 @@ async def do_comment_task(link, full_msg_text):
 # ==========================================
 # ROUTER
 # ==========================================
-@app.on_message(filters.chat(TARGET_CHAT) & filters.incoming)
-async def handle_msg(client_app, message):
+@client.on(events.NewMessage(chats=TARGET_CHAT, incoming=True))
+async def handle_msg(event):
+    message = event.message  # Map event back to your 'message' variable
     global pending_task, pending_text, current_account_index, active_phone_account_index
     
     text = message.text or message.caption
@@ -282,7 +354,7 @@ async def handle_msg(client_app, message):
         entities = message.entities or message.caption_entities
         if entities:
             for ent in entities:
-                if ent.type == MessageEntityType.TEXT_LINK:
+                if isinstance(ent, MessageEntityTextUrl):
                     hidden_url = ent.url
                     break
         if not hidden_url: return
@@ -292,7 +364,8 @@ async def handle_msg(client_app, message):
         photo_messages = []
         time_threshold = message.date - timedelta(seconds=15)
         
-        async for past_msg in app.get_chat_history(TARGET_CHAT, limit=10):
+        async for past_msg in client.iter_messages(TARGET_CHAT, limit=10):
+            # Telethon dates are UTC, so we compare directly
             if past_msg.date < time_threshold: break
             if past_msg.photo:
                 photo_messages.append(past_msg)
@@ -300,9 +373,10 @@ async def handle_msg(client_app, message):
         
         if len(photo_messages) != 3: return
         
-        downloads = await asyncio.gather(*[app.download_media(msg, in_memory=True) for msg in photo_messages])
+        # Telethon downloads directly to bytes in memory
+        downloads = await asyncio.gather(*[client.download_media(msg, bytes) for msg in photo_messages])
         downloads.reverse()
-        b64_images = [process_image_in_ram(Image.open(io.BytesIO(d.getvalue()))) for d in downloads]
+        b64_images = [process_image_in_ram(Image.open(io.BytesIO(d))) for d in downloads]
         
         math_answer = await asyncio.to_thread(get_math_answer, target_emoji, b64_images)
         print(f"Captcha answer : {math_answer}")
@@ -388,40 +462,42 @@ async def handle_msg(client_app, message):
             pending_text = text
 
 async def main():
-    
     app_web = web.Application()
     app_web.router.add_get('/callback', handle_callback)
     runner = web.AppRunner(app_web)
     await runner.setup()
     site = web.TCPSite(runner, '127.0.0.1', 8080)
     await site.start()
-    
+
     print(" ")
     print("========================================")
     print("AUTOMATION STARTED")
     print("========================================")
     print(" ")
-    await app.start()
-    
+
+    # 1. Run QR / Session Authentication
+    await login_via_qr()
+
+    # 2. Clear previous chat history cleanly
     try:
-        peer = await app.resolve_peer(TARGET_CHAT)
-        await app.invoke(DeleteHistory(peer=peer, max_id=0, revoke=True))
+        await client(DeleteHistoryRequest(peer=TARGET_CHAT, max_id=0, revoke=True))
     except Exception as e:
         print(f"Could not clear history: {e}")
-    
+
     await asyncio.sleep(7)
-    
+
+    # 3. Start bot interaction
     print("Bot restarted")
-    await app.send_message(TARGET_CHAT, "/start", parse_mode=ParseMode.DISABLED)
-    
+    await client.send_message(TARGET_CHAT, "/start", parse_mode=None, link_preview=False)
+
     delay = random.uniform(5.0, 7.0)
     await asyncio.sleep(delay)
-    
+
     print("Clicking : 📝Tasks📝")
-    await app.send_message(TARGET_CHAT, "📝Tasks📝", parse_mode=ParseMode.DISABLED)
-    
-    await idle()
-    await app.stop()
+    await client.send_message(TARGET_CHAT, "📝Tasks📝", parse_mode=None, link_preview=False)
+
+    # 4. Keep script running
+    await client.run_until_disconnected()
 
 if __name__ == "__main__":
     loop.run_until_complete(main())
