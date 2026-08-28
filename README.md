@@ -48,7 +48,7 @@ Install these three tools onto your device:
    *(Strictly use this download link; the version on the Google Play Store is deprecated and will not work).*
 2. **MacroDroid (Macro Automation):** **[Download MacroDroid from Play Store](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**.
 3. **ZArchiver (Image Viewer for QR Login):** **[Download ZArchiver from Play Store](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)**.
-(After download Zarchiver, open and allow permission and then close it simply).
+(After downloading Zarchiver, open it and allow permissions then close it simply).
 ---
 
 ## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
