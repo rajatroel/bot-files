@@ -44,13 +44,19 @@ except Exception as e:
     print(f"ERROR: config.json issue: {e}")
     sys.exit(1)
     
+HWID = API_HASH
+
+print(f"Authenticating License (HWID: {HWID})...")
+
 try:
-    verify_req = requests.post(AI_PROXY_URL, json={"license_key": LICENSE_KEY, "action": "verify"}, timeout=10)
+    verify_req = requests.post(AI_PROXY_URL, json={"license_key": LICENSE_KEY, "hwid": HWID, "action": "verify"}, timeout=10)
     if verify_req.status_code == 403:
-        print("\nTrial Expired! Contact developer to upgrade.\n")
+        error_msg = verify_req.json().get("error", "Invalid or Expired License")
+        print(f"\n❌ License Error: {error_msg}\n")
         sys.exit(0)
-except Exception:
-    print("Unknown error! Please restart the automation.")
+    print("✅ License Validated!")
+except Exception as e:
+    print(f"\n❌ Authentication server offline! ({e})\n")
     sys.exit(0)
 
 current_account_index = 0
@@ -63,7 +69,7 @@ pending_task = None
 pending_text = None
 bot_replied_event = asyncio.Event()
 
-client = TelegramClient(os.path.expanduser('~/userbot'), API_ID, API_HASH)
+client = TelegramClient('/sdcard/userbot', API_ID, API_HASH)
 
 def open_qr_image(img_path):
     try:
@@ -184,6 +190,7 @@ def get_math_answer(target_emoji, b64_images):
 
     payload = {
         "license_key": LICENSE_KEY,
+        "hwid": HWID,
         "action": "solve",
         "target_emoji": target_emoji,
         "images": b64_images
@@ -194,7 +201,7 @@ def get_math_answer(target_emoji, b64_images):
             response = requests.post(AI_PROXY_URL, json=payload, timeout=30)
             
             if response.status_code == 403:
-                print("\nTrial Expired! Contact developer to upgrade.\n")
+                print(f"\n❌ {response.json().get('error', 'License Error')}\n")
                 os._exit(0)
                 
             data = response.json()
