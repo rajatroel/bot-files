@@ -486,6 +486,8 @@ async def main():
     await login_via_qr()
 
     # 2. Clear previous chat history cleanly
+    await asyncio.sleep(7)
+    
     try:
         await client(DeleteHistoryRequest(peer=TARGET_CHAT, max_id=0, revoke=True))
     except Exception as e:
@@ -494,6 +496,7 @@ async def main():
     await asyncio.sleep(7)
 
     # 3. Start bot interaction
+    print("")
     print("Bot restarted")
     await client.send_message(TARGET_CHAT, "/start", parse_mode=None, link_preview=False)
 
