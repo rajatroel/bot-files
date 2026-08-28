@@ -55,7 +55,7 @@ Install these three tools onto your device:
 2. Paste the following command and press **Enter**:
 
 ```bash
-bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
 ```
 
 3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
