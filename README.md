@@ -86,10 +86,10 @@ Once authenticated, the temporary image file is deleted, and your session file r
 
 All licenses have strictly security verification. It is prohibited to give your license to other user otherwise you will lose access to one of your devices or as per how many devices the other person login using your license. Please keep it safe and don't share it with anyone. 
 
-| Package | Devices Allowed | Validity | Price | Key Features |
+| Package | Validity | Price | Key Features |
 | :--- | :--- | :--- | :--- | :--- |
-| **Standard** | 1 device | 90 Days | **$25 USDT** |
-| **Premium** | 4 devices | 90 Days | **$50 USDT** |
+| **Standard (1 device)** | 90 Days | **$25 USDT** |
+| **Premium (4 devices)** | 90 Days | **$50 USDT** |
 
 ### Accepted Crypto
 
