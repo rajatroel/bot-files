@@ -18,7 +18,7 @@ Before installing any files, configure your Android phone with these required se
 
 ## 🔑 Section 2: Step 1 — Generate Telegram API ID & Hash
 
-The bot connects directly to the Telegram MTProto network and binds your license to your unique Telegram credentials.
+The bot connects directly to the Telegram network and binds your license to your unique Telegram credentials.
 
 > **Crucial:** You must generate your API ID and Hash using the **exact Telegram phone number** you will be using to run the automation bot.
 
@@ -27,7 +27,7 @@ The bot connects directly to the Telegram MTProto network and binds your license
 3. Telegram will send a login confirmation code to your **official Telegram app**. Copy that code, paste it into the website, and click **Sign In**.
 4. Click on **API development tools**.
 5. Fill in the required fields:
-   * **App title:** Enter any name (e.g., `SMMRunner`)
+   * **App title:** Enter any name (e.g., `Runner`)
    * **Short name:** Enter any short word (e.g., `runner1`)
    * *URL and Platform fields can be left default/empty.*
 6. Click **Create application**.
@@ -53,10 +53,6 @@ Install these three tools onto your device:
 3. Check the box for **Reset variables on import**.
 4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
 5. Grant all 4 required system permissions:
-   * *Accessibility Service*
-   * *Write System Settings*
-   * *Draw Over Other Apps (Overlay)*
-   * *Usage Access*
 6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
 
 ---
@@ -66,7 +62,7 @@ Install these three tools onto your device:
 2. Paste the following command and press **Enter**:
 
 ```bash
-bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
+bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
 ```
 
 3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
@@ -81,46 +77,13 @@ bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/inst
 
 ## 📷 Section 6: Step 5 — One-Time Telegram QR Login
 
-Your session is automatically saved to `/sdcard/userbot.session` so you will only ever need to link your Telegram account once.
-
-```text
-========================================
-       QR CODE OPENED ON SCREEN         
-========================================
-Scan the image showing on your screen with your other phone!
-Waiting for scan (timeout 30s)...
-```
-
-1. The script will generate a QR code and open it directly on your screen via ZArchiver or your image viewer.
-2. **How to Scan the Code:**
-   * **Using a Second Phone:** Open Telegram on your second device → **Settings → Devices → Link Desktop Device** → Scan the QR code displaying on your primary phone.
-   * **Using One Phone:** Take a quick screenshot of the QR code → Send the image to another screen or friend → Open Telegram on your phone → **Settings → Devices → Link Desktop Device** → Scan the screenshot.
-3. **2FA Cloud Password:** If you have Two-Step Verification enabled, Termux will prompt:
-   ```text
-   [!] 2FA Cloud Password detected. Enter your password:
-   ```
-   Type your Telegram password into Termux and press **Enter**.
-4. Once authenticated, the temporary image file is deleted, and your session file remains permanently stored.
+When it ask to start the automation just get this prepare first get your another phone and ensure that official telegram app is downloaded and your number is loginned in it of which you are using api id and hash just open telegram there move to settings devices then scan qr, if you are getting black screen then go to telegram app setting settings then permission and allow it camera and photos and videos permission and then move back to Telegram app and then checek now you are seeing that camera is working, now in termux type 1 and hit enter to generate qrcode wait until it's on your screeen if you got popup open with just select zarchiver and it will be on your screen now immediately scan your qr code with another phone that you prepared and If you have Two-Step Verification enabled, Termux will prompt you enter your password just type it and hit enter:
+Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage boom when you see new device in the telegram all done. just press back on termux phone and your automation will start you will see bot restarted msg on termux console. Now close termux completely here are steps to close it completely close it from recent menu and open it again and then open your notification panel and click exit it will securely close the termux successfully. 
 
 ---
 
-## ⚡ Section 7: Step 6 — Live Operation, Stopping & Restarting
+## ⚡ Section 7: Setup Macrodroid - Import the required macros
 
-### Live Execution
-* Termux will output:
-  ```text
-  Bot restarted
-  Clicking : 📝Tasks📝
-  ```
-* The bot will automatically delete previous chat history, start the tasks flow, switch accounts, and resolve vision captchas via AI. **Do not touch your screen while tasks are executing.**
-
-### How to Stop the Bot
-1. Pull down your Android notification shade.
-2. Tap **Exit** on the persistent Termux notification.
-3. Open **MacroDroid** and toggle the top-right switch to **OFF**.
-
-### How to Restart the Bot
-* Open **MacroDroid** and toggle the main switch to **ON**. MacroDroid will automatically start Termux, restore your saved session, and begin tasks immediately.
 
 ---
 
@@ -133,21 +96,20 @@ All licenses include 24/7 automated vision captcha solving, auto-account switchi
 | **Single Runner** | 1 Phone / HWID | 90 Days | **$25 USDT** | Auto-Likes, Comments, AI Captcha Solver |
 | **Farm Master** | 4 Phones / HWIDs | 90 Days | **$50 USDT** | Multi-Device Sync, Farming Speed |
 
-### Accepted Payment Methods
+### Accepted Crypto
 
-* **USDT (TON Network):** `YOUR_TON_WALLET_ADDRESS` *(Fastest, sub-second confirmation)*
-* **Native TON Coin:** `YOUR_TON_WALLET_ADDRESS`
-* **Binance Pay ID:** `YOUR_BINANCE_PAY_ID`
-* **USDT (TRC-20 Network):** `YOUR_TRC20_WALLET_ADDRESS`
+**USDT TON** OR **TON (GRAM)**
 
-*(Self-custody TON wallet transactions do not require a MEMO or Tag).*
+UQCa9g8JwGSZWbgd2qfBGhG-92CAhV1k_cwkePfcOAJTsFJE
 
----
+Copy the above address and send payment to this address and ensure you are sending USDT-TON or TON (GRAM). Sending other tokens may result in permanent lose of your money. 
 
 ### How to Order Your License
 
+**Before sending any payment please contact the **[@Developer](https://t.me/iamrajatroel)** once confirmed from the developer then follow the below steps:**
+   
 1. Send the exact plan amount to one of the payment addresses above.
 2. Take a screenshot of the completed transaction receipt.
-3. Send the screenshot and your selected plan to **[@iamrajatroel](https://t.me/iamrajatroel)** on Telegram.
-4. Your unique license key and setup files will be delivered to your chat within 15 minutes.
+3. Send the screenshot to **[@Developer](https://t.me/iamrajatroel)** on Telegram.
+4. Your unique license key and setup files will be delivered to your chat within 5 minutes.
    
