@@ -10,8 +10,11 @@ Before installing any files, configure your Android phone with these required se
 
 1. **System Language:** Set your Android phone language to **English (United States or English UK)**. 
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**. 
-   * **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
+
+**Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
+
 2. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
+   
 3. **App Pinning / Locking:** Lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them after completing the initial setup.
    
 ---
