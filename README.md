@@ -12,9 +12,8 @@ Before installing any files, configure your Android phone with these required se
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**. 
    * **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
 2. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
-3. **App Pinning / Locking:** Lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
-4. **Battery Optimization:** Turn off Battery Optimization / Power Saving for both **Termux** and **MacroDroid** in your phone's system settings.
-
+3. **App Pinning / Locking:** Lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them after completing the initial setup.
+   
 ---
 
 ## 🔑 Section 2: Step 1 — Generate Telegram API ID & Hash
@@ -53,7 +52,7 @@ Install these three tools onto your device:
 2. Paste the following command and press **Enter**:
 
 ```bash
-bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
+bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
 ```
 
 3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
