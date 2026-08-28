@@ -60,7 +60,6 @@ Install these three tools onto your device:
 6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
 
 ---
-
 ## 💻 Section 5: Step 4 — Run Termux Installer & Configuration
 
 1. Open **Termux**.
@@ -68,59 +67,87 @@ Install these three tools onto your device:
 
 ```bash
 bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
+```
 
- * When the Android storage permission popup appears, tap Allow and return to Termux.
- * When prompted by the setup wizard, input your details line by line:
-   * API ID: Paste your numeric API ID → Press Enter.
-   * API Hash: Paste your alphanumeric API Hash → Press Enter.
-   * License Key: Paste your license key (e.g., SMMK-1D-XXXX-XXXX-XXXX) → Press Enter.
-   * Instagram Usernames: Paste each Instagram account display name one by one, pressing Enter after each name.
- * When all accounts have been entered, press Enter on an empty line to save your configuration.
-📷 Section 6: Step 5 — One-Time Telegram QR Login
-Your session is automatically saved to /sdcard/userbot.session so you will only ever need to link your Telegram account once.
+3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
+4. When prompted by the setup wizard, input your details line by line:
+   * **API ID:** Paste your numeric API ID → Press **Enter**.
+   * **API Hash:** Paste your alphanumeric API Hash → Press **Enter**.
+   * **License Key:** Paste your license key (e.g., `SMMK-1D-XXXX-XXXX-XXXX`) → Press **Enter**.
+   * **Instagram Usernames:** Paste each Instagram account display name one by one, pressing **Enter** after each name.
+5. When all accounts have been entered, press **Enter on an empty line** to save your configuration.
+
+---
+
+## 📷 Section 6: Step 5 — One-Time Telegram QR Login
+
+Your session is automatically saved to `/sdcard/userbot.session` so you will only ever need to link your Telegram account once.
+
+```text
 ========================================
        QR CODE OPENED ON SCREEN         
 ========================================
 Scan the image showing on your screen with your other phone!
 Waiting for scan (timeout 30s)...
+```
 
- * The script will generate a QR code and open it directly on your screen via ZArchiver or your image viewer.
- * How to Scan the Code:
-   * Using a Second Phone: Open Telegram on your second device → Settings → Devices → Link Desktop Device → Scan the QR code displaying on your primary phone.
-   * Using One Phone: Take a quick screenshot of the QR code → Send the image to another screen or friend → Open Telegram on your phone → Settings → Devices → Link Desktop Device → Scan the screenshot.
- * 2FA Cloud Password: If you have Two-Step Verification enabled, Termux will prompt:
+1. The script will generate a QR code and open it directly on your screen via ZArchiver or your image viewer.
+2. **How to Scan the Code:**
+   * **Using a Second Phone:** Open Telegram on your second device → **Settings → Devices → Link Desktop Device** → Scan the QR code displaying on your primary phone.
+   * **Using One Phone:** Take a quick screenshot of the QR code → Send the image to another screen or friend → Open Telegram on your phone → **Settings → Devices → Link Desktop Device** → Scan the screenshot.
+3. **2FA Cloud Password:** If you have Two-Step Verification enabled, Termux will prompt:
+   ```text
    [!] 2FA Cloud Password detected. Enter your password:
+   ```
+   Type your Telegram password into Termux and press **Enter**.
+4. Once authenticated, the temporary image file is deleted, and your session file remains permanently stored.
 
-   Type your Telegram password into Termux and press Enter.
- * Once authenticated, the temporary image file is deleted, and your session file remains permanently stored.
-⚡ Section 7: Step 6 — Live Operation, Stopping & Restarting
-Live Execution
- * Termux will output:
-   Bot restarted
-Clicking : 📝Tasks📝
+---
 
- * The bot will automatically delete previous chat history, start the tasks flow, switch accounts, and resolve vision captchas via AI. Do not touch your screen while tasks are executing.
-How to Stop the Bot
- * Pull down your Android notification shade.
- * Tap Exit on the persistent Termux notification.
- * Open MacroDroid and toggle the top-right switch to OFF.
-How to Restart the Bot
- * Open MacroDroid and toggle the main switch to ON. MacroDroid will automatically start Termux, restore your saved session, and begin tasks immediately.
-💳 Section 8: License Packages & Purchasing
+## ⚡ Section 7: Step 6 — Live Operation, Stopping & Restarting
+
+### Live Execution
+* Termux will output:
+  ```text
+  Bot restarted
+  Clicking : 📝Tasks📝
+  ```
+* The bot will automatically delete previous chat history, start the tasks flow, switch accounts, and resolve vision captchas via AI. **Do not touch your screen while tasks are executing.**
+
+### How to Stop the Bot
+1. Pull down your Android notification shade.
+2. Tap **Exit** on the persistent Termux notification.
+3. Open **MacroDroid** and toggle the top-right switch to **OFF**.
+
+### How to Restart the Bot
+* Open **MacroDroid** and toggle the main switch to **ON**. MacroDroid will automatically start Termux, restore your saved session, and begin tasks immediately.
+
+---
+
+## 💳 Section 8: License Packages & Purchasing
+
 All licenses include 24/7 automated vision captcha solving, auto-account switching, and macro updates.
-| Package | Devices Allowed | Validity | Price | Key Features |
-|---|---|---|---|---|
-| Single Runner | 1 Phone / HWID | 90 Days | $25 USDT | Auto-Likes, Comments, AI Captcha Solver |
-| Farm Master | 4 Phones / HWIDs | 90 Days | $50 USDT | Multi-Device Sync, Farming Speed |
-Accepted Payment Methods
- * USDT (TON Network): YOUR_TON_WALLET_ADDRESS (Fastest, sub-second confirmation)
- * Native TON Coin: YOUR_TON_WALLET_ADDRESS
- * Binance Pay ID: YOUR_BINANCE_PAY_ID
- * USDT (TRC-20 Network): YOUR_TRC20_WALLET_ADDRESS
-(Self-custody TON wallet transactions do not require a MEMO or Tag).
-How to Order Your License
- * Send the exact plan amount to one of the payment addresses above.
- * Take a screenshot of the completed transaction receipt.
- * Send the screenshot and your selected plan to @iamrajatroel on Telegram.
- * Your unique license key and setup files will be delivered to your chat within 15 minutes.
 
+| Package | Devices Allowed | Validity | Price | Key Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **Single Runner** | 1 Phone / HWID | 90 Days | **$25 USDT** | Auto-Likes, Comments, AI Captcha Solver |
+| **Farm Master** | 4 Phones / HWIDs | 90 Days | **$50 USDT** | Multi-Device Sync, Farming Speed |
+
+### Accepted Payment Methods
+
+* **USDT (TON Network):** `YOUR_TON_WALLET_ADDRESS` *(Fastest, sub-second confirmation)*
+* **Native TON Coin:** `YOUR_TON_WALLET_ADDRESS`
+* **Binance Pay ID:** `YOUR_BINANCE_PAY_ID`
+* **USDT (TRC-20 Network):** `YOUR_TRC20_WALLET_ADDRESS`
+
+*(Self-custody TON wallet transactions do not require a MEMO or Tag).*
+
+---
+
+### How to Order Your License
+
+1. Send the exact plan amount to one of the payment addresses above.
+2. Take a screenshot of the completed transaction receipt.
+3. Send the screenshot and your selected plan to **[@iamrajatroel](https://t.me/iamrajatroel)** on Telegram.
+4. Your unique license key and setup files will be delivered to your chat within 15 minutes.
+   
