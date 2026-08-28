@@ -45,18 +45,7 @@ Install these three tools onto your device:
 3. **ZArchiver (Image Viewer for QR Login):** **[Download ZArchiver from Play Store](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)**.
 
 ---
-
-## 🛠️ Section 4: Step 3 — Import & Configure MacroDroid
-
-1. **[Download the Latest Macro File (`backup.mdr`)](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)** to your phone's `Download` folder.
-2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
-3. Check the box for **Reset variables on import**.
-4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
-5. Grant all 4 required system permissions:
-6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
-
----
-## 💻 Section 5: Step 4 — Run Termux Installer & Configuration
+## 💻 Section 4: Step 4 — Run Termux Installer & Configuration
 
 1. Open **Termux**.
 2. Paste the following command and press **Enter**:
@@ -75,26 +64,32 @@ bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/inst
 
 ---
 
-## 📷 Section 6: Step 5 — One-Time Telegram QR Login
+## 📷 Section 5: Step 5 — One-Time Telegram QR Login
 
 When it ask to start the automation just get this prepare first get your another phone and ensure that official telegram app is downloaded and your number is loginned in it of which you are using api id and hash just open telegram there move to settings devices then scan qr, if you are getting black screen then go to telegram app setting settings then permission and allow it camera and photos and videos permission and then move back to Telegram app and then checek now you are seeing that camera is working, now in termux type 1 and hit enter to generate qrcode wait until it's on your screeen if you got popup open with just select zarchiver and it will be on your screen now immediately scan your qr code with another phone that you prepared and If you have Two-Step Verification enabled, Termux will prompt you enter your password just type it and hit enter:
 Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage boom when you see new device in the telegram all done. just press back on termux phone and your automation will start you will see bot restarted msg on termux console. Now close termux completely here are steps to close it completely close it from recent menu and open it again and then open your notification panel and click exit it will securely close the termux successfully. 
 
 ---
 
-## ⚡ Section 7: Setup Macrodroid - Import the required macros
+## 🛠️ Section 6: Step 3 — Import & Configure MacroDroid
 
-
+1. **[Download the Latest Macro File (`backup.mdr`)](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)** to your phone's `Download` folder.
+2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
+3. Check the box for **Reset variables on import**.
+4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
+5. Grant all 4 required system permissions:
+6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
+   
 ---
 
-## 💳 Section 8: License Packages & Purchasing
+## 💳 Section 7: License Packages & Purchasing
 
-All licenses include 24/7 automated vision captcha solving, auto-account switching, and macro updates.
+All licenses have strictly security verification. It is prohibited to give your license to other user otherwise you will lose access to one of your devices or as per how many devices the other person login using your license. Please keep it safe and don't share it with anyone. 
 
 | Package | Devices Allowed | Validity | Price | Key Features |
 | :--- | :--- | :--- | :--- | :--- |
-| **Single Runner** | 1 Phone / HWID | 90 Days | **$25 USDT** | Auto-Likes, Comments, AI Captcha Solver |
-| **Farm Master** | 4 Phones / HWIDs | 90 Days | **$50 USDT** | Multi-Device Sync, Farming Speed |
+| **Standard** | 1 device | 90 Days | **$25 USDT** |
+| **Premium** | 4 devices | 90 Days | **$50 USDT** |
 
 ### Accepted Crypto
 
