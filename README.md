@@ -1,53 +1,79 @@
-👑 SMM Kingdom Tasks Automation Bot (Termux)
-A fully automated, background task-completion engine built for @SmmKingdomTasksBot. This system automates Instagram Likes, Comments, account switching, and 24/7 AI-powered vision captcha solving.
-⚙️ Section 1: Prerequisites & Device Setup
+# 👑 SMM Kingdom Tasks Automation Bot (Termux)
+
+A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and 24/7 AI-powered vision captcha solving.
+
+---
+
+## ⚙️ Section 1: Prerequisites & Device Setup
+
 Before installing any files, configure your Android phone with these required settings:
- * System Language: Set your Android phone language to English (United States or English UK).
-   * App-specific alternative: If you prefer to keep your phone in another language, go to Settings \rightarrow Apps and set the individual language for Chrome and Instagram to English. The language inside @SmmKingdomTasksBot on Telegram must also be set to English.
- * Instagram Accounts: Log in to all your working VIP Instagram accounts inside the official Instagram app, and ensure they are added to @SmmKingdomTasksBot.
- * App Pinning / Locking: Lock both Termux and MacroDroid in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
- * Battery Optimization: Turn off Battery Optimization / Power Saving for both Termux and MacroDroid in your phone settings.
-🔑 Section 2: Step 1 — Generate Telegram API ID & Hash
+
+1. **System Language:** Set your Android phone language to **English (United States or English UK)**.
+   * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and set the individual language for **Chrome** and **Instagram** to **English**. The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
+2. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
+3. **App Pinning / Locking:** Lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
+4. **Battery Optimization:** Turn off Battery Optimization / Power Saving for both **Termux** and **MacroDroid** in your phone settings.
+
+---
+
+## 🔑 Section 2: Step 1 — Generate Telegram API ID & Hash
+
 The bot connects directly to the Telegram MTProto network and binds your license to your unique Telegram credentials.
-> Crucial: You must generate your API ID and Hash using the exact Telegram phone number you will be using to run the automation bot.
-> 
- * Open your browser and navigate to my.telegram.org.
- * Enter your Telegram phone number in international format (e.g., +1234567890 or +919876543210) and click Next.
- * Telegram will send a login confirmation code to your official Telegram app. Copy that code, paste it into the website, and click Sign In.
- * Click on API development tools.
- * Fill in the required fields:
-   * App title: Enter any name (e.g., SMMRunner)
-   * Short name: Enter any short word (e.g., runner1)
-   * URL and Platform fields can be left default/empty.
- * Click Create application.
- * Copy your api_id (numeric string) and api_hash (alphanumeric string) and save them in your Notes app.
-📲 Section 3: Step 2 — Install Required Applications
+
+> **Crucial:** You must generate your API ID and Hash using the **exact Telegram phone number** you will be using to run the automation bot.
+
+1. Open your browser and navigate to **[my.telegram.org](https://my.telegram.org)**.
+2. Enter your Telegram phone number in international format (e.g., `+1234567890` or `+919876543210`) and click **Next**.
+3. Telegram will send a login confirmation code to your **official Telegram app**. Copy that code, paste it into the website, and click **Sign In**.
+4. Click on **API development tools**.
+5. Fill in the required fields:
+   * **App title:** Enter any name (e.g., `SMMRunner`)
+   * **Short name:** Enter any short word (e.g., `runner1`)
+   * *URL and Platform fields can be left default/empty.*
+6. Click **Create application**.
+7. Copy your **`api_id`** (numeric string) and **`api_hash`** (alphanumeric string) and save them in your Notes app.
+
+---
+
+## 📲 Section 3: Step 2 — Install Required Applications
+
 Install these three tools onto your device:
- * Termux (Terminal Runner): Download Termux APK
-   (Strictly use this download link; the version on Google Play Store is deprecated and will not work).
- * MacroDroid (Macro Automation): Download MacroDroid from Play Store.
- * ZArchiver (Image Viewer for QR Login): Download ZArchiver from Play Store.
-🛠️ Section 4: Step 3 — Import & Configure MacroDroid
- * Download the Latest Macro File (backup.mdr) to your phone's Download folder.
- * Open MacroDroid \rightarrow tap the Export/Import tile on the home screen.
- * Check the box for Reset variables on import.
- * Tap Storage (under Import), select the downloaded backup.mdr file from your Download folder, and tap Clear existing and import all.
- * Grant all 4 required system permissions:
-   * Accessibility Service
-   * Write System Settings
-   * Draw Over Other Apps (Overlay)
-   * Usage Access
- * Toggle the main MacroDroid switch in the top-right corner OFF, wait 2 seconds, and toggle it back ON. Grant any remaining permission popups.
-💻 Section 5: Step 4 — Run Termux Installer & Configuration
- * Open Termux.
- * Paste the following command and press Enter:
-bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
+
+1. **Termux (Terminal Runner):** **[Download Termux APK](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)**  
+   *(Strictly use this download link; the version on Google Play Store is deprecated and will not work).*
+2. **MacroDroid (Macro Automation):** **[Download MacroDroid from Play Store](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**.
+3. **ZArchiver (Image Viewer for QR Login):** **[Download ZArchiver from Play Store](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)**.
+
+---
+
+## 🛠️ Section 4: Step 3 — Import & Configure MacroDroid
+
+1. **[Download the Latest Macro File (`backup.mdr`)](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)** to your phone's `Download` folder.
+2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
+3. Check the box for **Reset variables on import**.
+4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
+5. Grant all 4 required system permissions:
+   * *Accessibility Service*
+   * *Write System Settings*
+   * *Draw Over Other Apps (Overlay)*
+   * *Usage Access*
+6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
+
+---
+
+## 💻 Section 5: Step 4 — Run Termux Installer & Configuration
+
+1. Open **Termux**.
+2. Paste the following command and press **Enter**:
+
+```bash
+bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
 
  * When the Android storage permission popup appears, tap Allow and return to Termux.
  * When prompted by the setup wizard, input your details line by line:
-   * API ID: Paste your numeric API ID \rightarrow Press Enter.
-   * API Hash: Paste your alphanumeric API Hash \rightarrow Press Enter.
-   * License Key: Paste your license key (e.g., SMMK-1D-XXXX-XXXX-XXXX) \rightarrow Press Enter.
+   * API ID: Paste your numeric API ID → Press Enter.
+   * API Hash: Paste your alphanumeric API Hash → Press Enter.
+   * License Key: Paste your license key (e.g., SMMK-1D-XXXX-XXXX-XXXX) → Press Enter.
    * Instagram Usernames: Paste each Instagram account display name one by one, pressing Enter after each name.
  * When all accounts have been entered, press Enter on an empty line to save your configuration.
 📷 Section 6: Step 5 — One-Time Telegram QR Login
@@ -60,8 +86,8 @@ Waiting for scan (timeout 30s)...
 
  * The script will generate a QR code and open it directly on your screen via ZArchiver or your image viewer.
  * How to Scan the Code:
-   * Using a Second Phone: Open Telegram on your second device \rightarrow Settings \rightarrow Devices \rightarrow Link Desktop Device \rightarrow Scan the QR code displaying on your primary phone.
-   * Using One Phone: Take a quick screenshot of the QR code \rightarrow Send the image to another screen or friend \rightarrow Open Telegram on your phone \rightarrow Settings \rightarrow Devices \rightarrow Link Desktop Device \rightarrow Scan the screenshot.
+   * Using a Second Phone: Open Telegram on your second device → Settings → Devices → Link Desktop Device → Scan the QR code displaying on your primary phone.
+   * Using One Phone: Take a quick screenshot of the QR code → Send the image to another screen or friend → Open Telegram on your phone → Settings → Devices → Link Desktop Device → Scan the screenshot.
  * 2FA Cloud Password: If you have Two-Step Verification enabled, Termux will prompt:
    [!] 2FA Cloud Password detected. Enter your password:
 
@@ -97,4 +123,4 @@ How to Order Your License
  * Take a screenshot of the completed transaction receipt.
  * Send the screenshot and your selected plan to @iamrajatroel on Telegram.
  * Your unique license key and setup files will be delivered to your chat within 15 minutes.
- * 
+
