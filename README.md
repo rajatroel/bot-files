@@ -1,6 +1,6 @@
 # 👑 SMM Kingdom Tasks Automation Bot (Termux)
 
-A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and 24/7 AI-powered vision captcha solving.
+A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and magical AI-powered vision captcha solving.
 
 ---
 
@@ -8,7 +8,7 @@ A fully automated, background task-completion engine built for **@SmmKingdomTask
 
 Before installing any files, configure your Android phone with these required settings:
 
-1. **System Language:** Set your Android phone language to **English (United States or English UK)**.
+1. **System Language:** Set your Android phone language to **English (United States or English UK). The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.**
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and set the individual language for **Chrome** and **Instagram** to **English**. The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
 2. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
 3. **App Pinning / Locking:** Lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
