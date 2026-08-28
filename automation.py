@@ -26,6 +26,26 @@ import cv2
 import numpy as np
 
 # ==========================================
+# STARTUP MENU
+# ==========================================
+print("\n========================================")
+print(" 👑 SMM Kingdom Automation")
+print("========================================")
+print(" 1 - Start Automation Script")
+print(" 2 - Exit to Terminal")
+print("========================================\n")
+
+while True:
+    user_choice = input("Type 1 or 2 and press Enter: ").strip()
+    if user_choice == '1':
+        print("\nStarting...")
+        break
+    elif user_choice == '2':
+        sys.exit(0)
+    else:
+        print("Invalid input. Please type 1 or 2.")
+
+# ==========================================
 TARGET_CHAT = "@SmmKingdomTasksBot"
 AI_PROXY_URL = "https://captcha-solver.imrajatroel.workers.dev"
 # ==========================================
@@ -511,3 +531,4 @@ async def main():
 
 if __name__ == "__main__":
     loop.run_until_complete(main())
+                               
