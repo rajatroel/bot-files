@@ -89,8 +89,7 @@ except Exception as e:
     print("\n" + "="*42)
     print("ALL DONE SUCCESSFULLY!")
     print("="*42 + "\n")
-    print("You can now run the main bot installation command.\n")
-
+    
 except KeyboardInterrupt:
     print("\n\nSetup cancelled by user. No files were saved.")
     sys.exit(1)
