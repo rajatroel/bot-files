@@ -16,7 +16,9 @@ Before installing any files, configure your Android phone with these required se
 1. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
    
 2. **App Pinning / Locking:** After completing the whole setup, lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
-   
+
+**CRUCIAL:** You must grant every single permission requested during the setup process for the automation to function properly. When Termux, MacroDroid, or ZArchiver prompt you for access—such as Camera, Files/Storage, Accessibility, or Display Over Other Apps—do not skip or deny any of them. If even one permission is missed, Android will restrict the background processes and the bot will fail to execute tasks.
+
 ---
 
 ## 🔑 Section 2: Step 1 — Generate Telegram API ID & Hash
@@ -46,7 +48,7 @@ Install these three tools onto your device:
    *(Strictly use this download link; the version on the Google Play Store is deprecated and will not work).*
 2. **MacroDroid (Macro Automation):** **[Download MacroDroid from Play Store](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**.
 3. **ZArchiver (Image Viewer for QR Login):** **[Download ZArchiver from Play Store](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)**.
-
+(After download Zarchiver, open and allow permission and then close it simply).
 ---
 
 ## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
