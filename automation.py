@@ -353,7 +353,8 @@ async def handle_msg(event):
     message = event.message  # Map event back to your 'message' variable
     global pending_task, pending_text, current_account_index, active_phone_account_index
     
-    text = message.text or message.caption
+    # Use raw_text to strip Telethon's invisible markdown brackets
+    text = message.raw_text or message.text or message.caption
     if not text: return
     text_lower = text.lower()
     
@@ -426,7 +427,9 @@ async def handle_msg(event):
         pending_task = None
         text_lower = text.lower() 
 
-    extracted_link = re.search(r'(https?://[^\s]+)', text).group(1) if re.search(r'(https?://[^\s]+)', text) else None
+    # Safely extract the link, ignoring any trailing brackets or parentheses
+    match = re.search(r'(https?://[^\s\]\)\>]+)', text)
+    extracted_link = match.group(1) if match else None
 
     if "choose social network" in text_lower:
         await smart_send("Instagram")
@@ -531,4 +534,3 @@ async def main():
 
 if __name__ == "__main__":
     loop.run_until_complete(main())
-        
