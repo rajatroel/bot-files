@@ -16,7 +16,7 @@ try:
     print(f"Current License: {config.get('license_key', 'None')}")
     
     # Prompt the user for the new key
-    new_key = input("\nEnter your new License Key: ").strip()
+    new_key = input("\nEnter your License Key: ").strip()
     
     if not new_key:
         print("❌ No key entered. Update cancelled.")
