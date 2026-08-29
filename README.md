@@ -101,9 +101,9 @@ All licenses are strictly bound to your hardware via security verification. Shar
 
 | Package | Validity | Price |
 | :--- | :--- | :--- |
-| **Standard (1 Device)** | 90 Days | **$25 USDT** |
-| **Premium (4 Devices)** | 90 Days | **$50 USDT** |
-| **Premium Plus (4 Devices)** | 180 Days | **$90 USDT** |
+| **Basic (1 Device)** | 90 Days | **$25 USDT** |
+| **Standard (4 Devices)** | 90 Days | **$50 USDT** |
+| **Premium (4 Devices)** | 180 Days | **$90 USDT** |
 
 ### Accepted Crypto
 **USDT (TON Network)** OR **Native TON (GRAM)**
