@@ -44,10 +44,10 @@ The bot connects directly to the Telegram network and binds your license to your
 
 Install these three tools onto your device:
 
-1. **Termux (Terminal Runner):** **[Download Termux APK](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk)**  
+1. **Termux (Terminal Runner):** **Download [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) APK**  
    *(Strictly use this download link; the version on the Google Play Store is deprecated and will not work).*
-2. **MacroDroid (Macro Automation):** **[Download MacroDroid from Play Store](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid)**.
-3. **ZArchiver (Image Viewer for QR Login):** **[Download ZArchiver from Play Store](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)**.
+2. **MacroDroid (Macro Automation):** **Download [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) from Play Store**.
+3. **ZArchiver (Image Viewer for QR Login):** **Download [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) from Play Store**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 ---
 
