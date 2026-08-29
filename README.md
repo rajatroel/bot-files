@@ -86,7 +86,7 @@ Before starting the automation, prepare a **second phone** that has the official
 
 ## 🛠️ Section 6: Step 5 — Import & Configure MacroDroid
 
-1. **Download the Latest Macro File [(`backup.mdr`)](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr)** to your phone's `Download` folder.
+1. **Download the Latest Macrodroid [backup.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr) file** to your phone's `Download` folder.
 2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
 3. Check the box for **Reset variables on import**.
 4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
