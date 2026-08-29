@@ -28,7 +28,7 @@ try:
     with open(config_path, 'w') as f:
         json.dump(config, f, indent=4)
         
-    print("\n✅ License Key successfully updated! You can now start the bot.")
+    print("\n✅ License Key successfully updated!")
     
 except Exception as e:
     print(f"\n❌ Failed to update config: {e}")
