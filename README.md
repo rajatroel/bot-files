@@ -123,15 +123,15 @@ Copy the address above and ensure you are strictly sending **USDT-TON** or **TON
 3. Send the screenshot to **[@Developer](https://t.me/iamrajatroel)** on Telegram.
 4. Your unique license key and setup files will be delivered to your chat within 5 minutes.
 
-🔑 **How to Update Your License Key**
+### 🔑 How to Update Your License Key
 
-If you need to apply a new license key or renew an expired one, you can update it quickly without reinstalling the bot.
+**If you need to apply a new license key or renew an expired one, you can update it quickly without reinstalling the bot.**
 
- * Open Termux. (If your bot is currently running, type 2 and press Enter to exit to the command line).
- * Copy and paste the following command into Termux and press Enter:
+1. Open Termux. (If your bot is currently running, type 2 and press Enter to exit to the command line).
+2. Copy and paste the following command into Termux and press Enter:
    
 ```bash
 curl -sL -o license.py https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py && python license.py && rm license.py
 ```
 
- * Paste your new license key when prompted and press Enter.
+3.Paste your new license key when prompted and press Enter.
