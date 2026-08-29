@@ -121,7 +121,7 @@ Copy the address above and ensure you are strictly sending **USDT-TON** or **TON
 1. Send the exact plan amount to the payment address above.
 2. Take a clear screenshot of the completed transaction receipt.
 3. Send the screenshot to **[@Developer](https://t.me/iamrajatroel)** on Telegram.
-4. Your unique license key and setup files will be delivered to your chat within 5 minutes.
+4. Your unique license key and its information will be delivered to your chat within 5 minutes.
 
 ### 🔑 How to Update Your License Key
 
