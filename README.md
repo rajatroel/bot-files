@@ -129,9 +129,10 @@ Copy the address above and ensure you are strictly sending **USDT-TON** or **TON
 
 1. Open Termux. (If your bot is currently running, type 2 and press Enter to exit to the command line).
 2. Copy and paste the following command into Termux and press Enter:
+
    
 ```bash
 curl -sL -o license.py https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py && python license.py && rm license.py
 ```
 
-3.Paste your new license key when prompted and press Enter.
+3. Paste your new license key when prompted and press Enter.
