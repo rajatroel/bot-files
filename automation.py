@@ -25,6 +25,11 @@ from PIL import Image
 import cv2
 import numpy as np
 
+# ADD THESE 3 LINES RIGHT HERE
+DIAG_K1 = np.eye(4, dtype=np.uint8)
+DIAG_K2 = np.fliplr(np.eye(4, dtype=np.uint8))
+RECT_K = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+
 # ==========================================
 # STARTUP MENU
 # ==========================================
@@ -199,11 +204,33 @@ async def wait_for_macro(timeout_seconds):
 # AI
 # ==========================================
 def process_image_in_ram(pil_img):
-    img_array = np.array(pil_img)
-    gray_img = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
-    _, clean_img = cv2.threshold(gray_img, 15, 255, cv2.THRESH_BINARY)
-    _, buffer = cv2.imencode('.jpg', clean_img)
-    return base64.b64encode(buffer).decode('utf-8')
+    try:
+        img_array = np.array(pil_img.convert("RGB"))
+        gray = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
+        
+        _, base_img = cv2.threshold(gray, 15, 255, cv2.THRESH_BINARY)
+        
+        if np.sum(base_img == 0) < 50:
+            _, base_img = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            if np.sum(base_img == 0) < 50:
+                base_img = gray
+                
+        inverted = cv2.bitwise_not(base_img)
+        healed = cv2.morphologyEx(inverted, cv2.MORPH_CLOSE, DIAG_K1)
+        healed = cv2.morphologyEx(healed, cv2.MORPH_CLOSE, DIAG_K2)
+        healed = cv2.morphologyEx(healed, cv2.MORPH_CLOSE, RECT_K)
+        
+        num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(healed, connectivity=8)
+        clean_foreground = np.zeros_like(healed)
+        for i in range(1, num_labels):
+            if stats[i, cv2.CC_STAT_AREA] >= 8:
+                clean_foreground[labels == i] = 255
+                
+        final_img = cv2.bitwise_not(clean_foreground)
+        _, buffer = cv2.imencode('.jpg', final_img)
+        return base64.b64encode(buffer).decode('utf-8')
+    except Exception:
+        return None
 
 def get_math_answer(target_emoji, b64_images):
     print("Solving captcha...")
