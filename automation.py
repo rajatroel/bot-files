@@ -30,9 +30,6 @@ DIAG_K1 = np.eye(4, dtype=np.uint8)
 DIAG_K2 = np.fliplr(np.eye(4, dtype=np.uint8))
 RECT_K = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
 
-# === ADDED: EMBEDDED CHECKBOX TEMPLATE ===
-TEMPLATE_B64 = "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"
-
 # ==========================================
 # STARTUP MENU
 # ==========================================
@@ -181,48 +178,6 @@ async def handle_callback(request):
     macro_event.set()
     return web.Response(text="OK")
     
-async def handle_get_coords(request):
-    try:
-        screenshot_path = "/sdcard/Target.png"
-        
-        # Safe-check polling: wait up to 3 seconds for MacroDroid to finish writing the file
-        for _ in range(15):
-            if os.path.exists(screenshot_path) and os.path.getsize(screenshot_path) > 0:
-                break
-            await asyncio.sleep(0.2)
-
-        # Read the full screen screenshot from MacroDroid
-        img = cv2.imread(screenshot_path, cv2.IMREAD_GRAYSCALE)
-        if img is None:
-            return web.json_response({"error": "Screenshot Latest.png not found or empty"}, status=400)
-
-        # Automatically apply Base64 padding correction
-        padded_b64 = TEMPLATE_B64 + '=' * (-len(TEMPLATE_B64) % 4)
-
-        # Decode template directly in RAM
-        template_bytes = base64.b64decode(padded_b64)
-        np_arr = np.frombuffer(template_bytes, np.uint8)
-        template = cv2.imdecode(np_arr, cv2.IMREAD_GRAYSCALE)
-
-        if template is None:
-            return web.json_response({"error": "Failed to decode Base64 template"}, status=400)
-
-        # Run OpenCV Template Matching
-        res = cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
-        min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-
-        # Calculate exact center coordinates
-        h, w = template.shape
-        center_x = int(max_loc[0] + w / 2)
-        center_y = int(max_loc[1] + h / 2)
-
-        print(f"✅ OpenCV Match Found! Coordinates -> X: {center_x}, Y: {center_y} (Confidence: {max_val:.2f})")
-        return web.json_response({"x": center_x, "y": center_y, "confidence": float(max_val)})
-
-    except Exception as e:
-        print(f"❌ Error in OpenCV match: {str(e)}")
-        return web.json_response({"error": str(e)}, status=500)    
-
 async def fire_intent(action, extras=None):
     macro_event.clear()
     cmd = ["broadcast", "-a", action]
@@ -566,7 +521,6 @@ async def handle_msg(event):
 async def main():
     app_web = web.Application()
     app_web.router.add_get('/callback', handle_callback)
-    app_web.router.add_get('/get-coords', handle_get_coords) # <-- ADD THIS LINE
     runner = web.AppRunner(app_web)
     await runner.setup()
     site = web.TCPSite(runner, '127.0.0.1', 8080)
