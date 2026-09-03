@@ -109,7 +109,7 @@ All licenses are strictly bound to your hardware via security verification. Shar
 **USDT (TON Network)** OR **Native TON (GRAM)**
 
 ```bash
-UQCa9g8JwGSZWbgd2qfBGhG-92CAhV1k_cwkePfcOAJTsFJE
+UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP
 ```
 
 Copy the address above and ensure you are strictly sending **USDT-TON** or **TON (GRAM)**. Sending tokens from other networks (like TRC-20 or ERC-20) to this address will result in the permanent loss of your funds. 
