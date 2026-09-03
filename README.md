@@ -1,4 +1,4 @@
-# 👑 SMM Kingdom Tasks Automation Bot (ANDROID 11+)
+# 👑 SMM Kingdom Tasks Automation Bot (Android 11+)
 
 A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
 
