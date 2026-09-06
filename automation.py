@@ -426,7 +426,8 @@ async def handle_msg(event):
     global pending_task, pending_text, current_account_index, active_phone_account_index
     
     # Use raw_text to strip Telethon's invisible markdown brackets
-    text = message.raw_text or message.text or message.caption
+    text = getattr(message, 'raw_text', getattr(message, 'text', ''))
+    
     if not text: return
     text_lower = text.lower()
     
