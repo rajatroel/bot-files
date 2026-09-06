@@ -452,7 +452,7 @@ async def handle_msg(event):
         target_emoji = emoji_match.group(1).strip()
 
         hidden_url = None
-        entities = message.entities or message.caption_entities
+        entities = getattr(message, 'entities', None) or getattr(message, 'caption_entities', None)
         if entities:
             for ent in entities:
                 if isinstance(ent, MessageEntityTextUrl):
