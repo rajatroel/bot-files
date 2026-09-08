@@ -1,1 +1,1 @@
-Guide available soon!
+Guide will be available soon!
