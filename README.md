@@ -1,4 +1,4 @@
-# 👑 SMM Kingdom Tasks Automation Bot (Android 11+)
+# 👑 SMM Kingdom Tasks Automation App
 
 A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
 
@@ -51,25 +51,6 @@ Install these three tools onto your device:
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 ---
 
-## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
-
-1. Open **Termux**.
-2. Paste the following command and press **Enter**:
-
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
-```
-
-3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
-4. When prompted by the setup wizard, input your details line by line:
-   * **API ID:** Paste your numeric API ID → Press **Enter**.
-   * **API Hash:** Paste your alphanumeric API Hash → Press **Enter**.
-   * **License Key:** Paste your license key (e.g., `SMMK-1D-XXXX-XXXX-XXXX`) → Press **Enter**.
-   * **Instagram Usernames:** Paste each Instagram account display name one by one, pressing **Enter** after each name.
-5. When all accounts have been entered, press **Enter on an empty line** to save your configuration.
-
----
-
 ## 📷 Section 5: Step 4 — One-Time Telegram QR Login
 
 Before starting the automation, prepare a **second phone** that has the official Telegram app logged into your target number.
@@ -82,17 +63,6 @@ Before starting the automation, prepare a **second phone** that has the official
 5. **Success:** Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage. You will see a new device logged in on your Telegram app.
 6. **Safe Exit:** Press the back button on your main phone to exit the image. To securely close Termux, swipe it away from your Recent Apps menu, reopen Termux, pull down your Android notification panel, and tap **Exit**.
 
----
-
-## 🛠️ Section 6: Step 5 — Import & Configure MacroDroid
-
-1. **Download the Latest Macrodroid [backup.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr) file** to your phone's `Download` folder.
-2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
-3. Check the box for **Reset variables on import**.
-4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
-5. Grant all 4 required system permissions prompted on the screen (Accessibility, Display Over Other Apps, Write Settings, Usage Access).
-6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
-   
 ---
 
 ## 💳 Section 7: License Packages & Purchasing
