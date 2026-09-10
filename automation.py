@@ -51,17 +51,17 @@ except Exception as e:
     
 HWID = API_HASH
 
-print(f"Authenticating License (HWID: {HWID})...")
+print(f"Checking license...")
 
 try:
     verify_req = requests.post(AI_PROXY_URL, json={"license_key": LICENSE_KEY, "hwid": HWID, "action": "verify"}, timeout=10)
     if verify_req.status_code == 403:
         error_msg = verify_req.json().get("error", "Invalid or Expired License")
-        print(f"\n❌ License Error: {error_msg}\n")
+        print(f"\nLicense Error: {error_msg}\n")
         sys.exit(0)
-    print("✅ License Validated!")
+    print("License validated!")
 except Exception as e:
-    print(f"\n❌ Authentication server offline! ({e})\n")
+    print(f"\nAuthentication server offline! ({e})\n")
     sys.exit(0)
 
 current_account_index = 0
@@ -121,9 +121,7 @@ async def login_via_qr():
             # 2. POP OPEN IN ZARCHIVER (OR FALLBACK)
             open_qr_image(img_path)
 
-            print("\n========================================")
-            print("       QR CODE OPENED ON SCREEN         ")
-            print("========================================")
+            print("QR CODE OPENED ON SCREEN")
             print("Scan the image showing on your screen with your other phone!")
             print("Waiting for scan (timeout 30s)...")
 
@@ -144,7 +142,7 @@ async def login_via_qr():
         if os.path.exists(img_path):
             os.remove(img_path)
             
-        print("\n✅ Logged in successfully! Session saved inside Termux.")
+        print("\nLogged in successfully!")
 
 # ==========================================
 # MACRODROID WEBHOOK & INTENT SERVER
@@ -230,7 +228,7 @@ def get_math_answer(target_emoji, b64_images):
             response = requests.post(AI_PROXY_URL, json=payload, timeout=30)
             
             if response.status_code == 403:
-                print(f"\n❌ {response.json().get('error', 'License Error')}\n")
+                print(f"\n{response.json().get('error', 'License Error')}\n")
                 os._exit(0)
                 
             data = response.json()
@@ -339,7 +337,7 @@ async def do_comment_task(link, full_msg_text):
         return
     # ====================================================
         
-    print(f"Instructing MacroDroid to comment: {comment_text}")
+    print("Performing action...")
     
     await fire_intent("com.bot.COMMENT", {
         "Link": link, 
@@ -372,7 +370,7 @@ async def handle_msg(event):
     if "warnings" in text_lower and "profile's username" not in text_lower and "too many" not in text_lower: return
 
     if "verification failed" in text_lower:
-        print("Verification Failed! Telling MacroDroid...")
+        print("Verification Failed!")
         await fire_intent("com.bot.CAPTCHA_FAILED")
         os._exit(0)
 
@@ -510,9 +508,7 @@ async def main():
     await site.start()    
 
     print(" ")
-    print("========================================")
-    print("AUTOMATION STARTED")
-    print("========================================")
+    print("AUTOMATION STARTED SUCCESSFULLY")
     print(" ")
 
     # 1. Run QR / Session Authentication
