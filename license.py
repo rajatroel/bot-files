@@ -32,5 +32,5 @@ try:
     print("\nLicense Key successfully updated!")
     
 except Exception as e:
-    print(f"\nFailed to update config: {e}")
+    print(f"\nFailed to update your config: {e}")
     sys.exit(1)
