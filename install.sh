@@ -2,9 +2,7 @@
 set -e
 
 clear
-echo "========================================"
 echo "SETTING UP PERMISSIONS"
-echo "========================================"
 echo ""
 
 # 1. Storage Permission Auto-Detect Loop
@@ -33,7 +31,6 @@ while [ ! -d "$HOME/storage/shared" ]; do
         echo ""
         echo "Storage permission not detected!"
         echo "If you clicked 'Deny', we must try again."
-        echo "========================================"
         sleep 2
     fi
 done
@@ -42,9 +39,8 @@ echo "Storage permission granted!"
 sleep 1
 clear
 
-echo "========================================"
+echo ""
 echo "DETECTING DEVICE ARCHITECTURE"
-echo "========================================"
 echo ""
 
 # 2. Dynamic Architecture Detection
@@ -60,9 +56,7 @@ else
 fi
 
 echo ""
-echo "========================================"
 echo "DOWNLOADING FILES"
-echo "========================================"
 echo ""
 
 # 3. Download backup with clean percentage display
