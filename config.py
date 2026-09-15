@@ -7,12 +7,12 @@ def clear_screen():
     os.system('clear' if os.name == 'posix' else 'cls')
 
 clear_screen()
-print("\n" + "="*42)
+print("")
 print("CREATE YOUR CONFIG")
-print("="*42)
+print("")
 print("Let's set up your bot configuration.")
 print("Please enter your details carefully.")
-print("-"*42)
+print("")
 
 try:
     # 1. Get API Credentials & License Key
@@ -34,14 +34,14 @@ try:
 
     # 2. Get Accounts Dynamically
     accounts = []
-    print("\n" + "-"*42)
+    print("")
     print("ACCOUNT SETUP")
-    print("-"*42)
+    print("")
     print("Enter your Instagram usernames one by one.")
     print("Press ENTER after each name.")
     print("When you are done, just press ENTER on an empty line to finish.\n")
     print("NOTE : Check your all account name spelling carefully before submitting!")
-    print("-"*42)
+    print("")
     
     count = 1
     while True:
@@ -79,9 +79,9 @@ try:
         json.dump(config_data, f, indent=4)
 
     # Merged the stray print statements into one clean success message
-    print("\n" + "="*42)
+    print(""
     print("CONFIGURATION SAVED")
-    print("="*42 + "\n")
+    print("")
 
 # Removed duplicate except blocks
 except KeyboardInterrupt:
