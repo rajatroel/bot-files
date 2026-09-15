@@ -79,7 +79,6 @@ try:
         json.dump(config_data, f, indent=4)
 
     # Merged the stray print statements into one clean success message
-    print("")
     print("CONFIGURATION SAVED")
     print("")
 
