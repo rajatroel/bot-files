@@ -48,10 +48,10 @@ Install these four tools onto your device:
 
 1. **Download & install [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app**  
    
-2. **Download & install [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app**
+2. **Download & install [Macrodroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app**
 (Recommended: Purchase its pro license).
 
-3. **Download & install [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
+3. **Download & install [Zarchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 
 4. **Download & install [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app**.
@@ -93,8 +93,8 @@ Before starting the automation, prepare a **second phone** that has the official
 
 ## Section 6: Step 5 - Complete the initial setup via tutorial
 
-1. **Ensure the Shizuku app is installed and running on your device.
-2. Visit this telegram channel for initial setup tutorial video.
+1. Ensure the Shizuku app is installed and running on your device.
+2. Visit this telegram channel for initial setup [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
 
 All done!
 
