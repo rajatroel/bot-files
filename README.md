@@ -1,4 +1,4 @@
-# 👑 SMM Kingdom Tasks Automation Bot 
+# 👑 SMM Kingdom Tasks Automation Bot (Android 11+) 
 
 A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
 
@@ -11,7 +11,7 @@ Before installing any files, configure your Android phone with these required se
 **System Language:** Set your Android phone language to **English (United States or English UK)**. 
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**.
 
-**Ram** 4GB recommended
+**Ram:** 4GB recommended
 
 **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
 
