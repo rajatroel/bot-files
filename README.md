@@ -98,9 +98,9 @@ Before starting the automation, prepare a **second phone** that has the official
 
 All done!
 
-## Other information
+## Other usefull information
 
-## 🛠️ How to Import & Configure MacroDroid
+## How to Import & Configure MacroDroid
 
 1. **Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file** to your phone's `Download` folder.
 2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
@@ -111,7 +111,7 @@ All done!
    
 ---
 
-## 💳 Section 7: License Packages & Purchasing
+## 💳 License Package & Purchasing
 
 All licenses are strictly bound to your hardware via security verification. Sharing your license key with another user is prohibited and will result in a permanent system ban and loss of access for your devices. Please keep your key private.
 
