@@ -94,7 +94,7 @@ Before starting the automation, prepare a **second phone** that has the official
 ## Section 6: Step 5 - Complete the initial setup via tutorial
 
 1. Ensure the Shizuku app is installed and running on your device.
-2. Visit this telegram channel for initial setup [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
+2. After completing every step of above, follow the [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
 
 All done!
 
