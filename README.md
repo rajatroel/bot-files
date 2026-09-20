@@ -48,7 +48,8 @@ Install these three tools onto your device:
 
 1. **Termux (Terminal Runner):** **Download [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) APK**  
    *(Strictly use this download link; the version on the Google Play Store is deprecated and will not work).*
-2. **MacroDroid (Macro Automation):** **Download [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) from Play Store**.
+2. **MacroDroid (Macro Automation):** **Download [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) from Play Store**
+**Recommended:** Purchase its pro license.
 3. **ZArchiver (Image Viewer for QR Login):** **Download [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) from Play Store**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 ---
@@ -86,9 +87,19 @@ Before starting the automation, prepare a **second phone** that has the official
 
 ---
 
-## 🛠️ Section 6: Step 5 — Import & Configure MacroDroid
+## Section 6: Step 5 - Run Shizuku on your device using wireless debugging
 
-1. **Download the Latest Macrodroid [backup.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/backup.mdr) file** to your phone's `Download` folder.
+1. **Download the Latest Shizuku app and install it on your device.
+2. **Run it on your device using wireless debugging. You can search for how to run it on youtube, and choose the appropriate way to run it for your specific device.
+3. When Shizuku is successfully running, visit this telegram channel for initial setup tutorial.
+
+All done!
+
+## Other information
+
+## 🛠️ How to Import & Configure MacroDroid
+
+1. **Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file** to your phone's `Download` folder.
 2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
 3. Check the box for **Reset variables on import**.
 4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
