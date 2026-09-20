@@ -94,11 +94,11 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 ## Section 6: Step 5 - Complete the initial setup via tutorial
 
 1. Ensure the Shizuku app is installed and running on your device.
-2. After completing every step of above, follow the [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
+2. Open Macrodroid and follow the [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
 
 All done!
 
-## Other usefull information
+## Other useful information
 
 ## How to Import & Configure MacroDroid
 
@@ -106,8 +106,7 @@ All done!
 2. Open **MacroDroid** → tap the **Export/Import** tile on the home screen.
 3. Check the box for **Reset variables on import**.
 4. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your `Download` folder, and tap **Clear existing and import all**.
-5. Grant all 4 required system permissions prompted on the screen (Accessibility, Display Over Other Apps, Write Settings, Usage Access).
-6. Toggle the main MacroDroid switch in the top-right corner **OFF**, wait 2 seconds, and toggle it back **ON**. Grant any remaining permission popups.
+5. Grant permission if required.
    
 ---
 
