@@ -10,6 +10,7 @@ Before installing any files, configure your Android phone with these required se
 
 **System Language:** Set your Android phone language to **English (United States or English UK)**. 
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**.
+
 **Ram** 4GB recommended
 
 **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
