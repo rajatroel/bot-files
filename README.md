@@ -11,8 +11,6 @@ Before installing any files, configure your Android phone with these required se
 **System Language:** Set your Android phone language to **English (United States or English UK)**. 
    * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**.
 
-**Ram:** 4GB recommended
-
 **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
 
 1. **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official **Instagram app**, and ensure they are added to `@SmmKingdomTasksBot`.
@@ -20,6 +18,8 @@ Before installing any files, configure your Android phone with these required se
 2. **App Pinning / Locking:** After completing the whole setup, lock both **Termux** and **MacroDroid** in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
 
 **CRUCIAL:** You must grant every single permission requested during the setup process for the automation to function properly. When Termux, MacroDroid, or ZArchiver prompt you for access—such as Camera, Files/Storage, Accessibility, or Display Over Other Apps—do not skip or deny any of them. If even one permission is missed, Android will restrict the background processes and the bot will fail to execute tasks.
+
+**Ram:** 4GB recommended
 
 ---
 
