@@ -49,14 +49,13 @@ Install these four tools onto your device:
 1. **Download & install [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app**  
    
 2. **Download & install [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app**
-   
-**Recommended:** Purchase its pro license.
+(Recommended: Purchase its pro license).
 
 3. **Download & install [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 
 4. **Download & install [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app**.
-(Run it on your device using wireless debugging. You can search for how to run it on youtube, for your specific device.).
+(Run it on your device using wireless debugging. You can search for how to run it on youtube, for your specific device).
 ---
 
 ## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
