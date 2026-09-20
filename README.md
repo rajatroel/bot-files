@@ -44,16 +44,19 @@ The bot connects directly to the Telegram network and binds your license to your
 
 ## 📲 Section 3: Step 2 — Install Required Applications
 
-Install these three tools onto your device:
+Install these four tools onto your device:
 
-1. **Termux (Terminal Runner):** **Download [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app**  
-   *(Strictly use this download link; the version on the Google Play Store is deprecated and will not work).*
-2. **MacroDroid (Macro Automation):** **Download [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app**
+1. **Download & install [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app**  
+   
+2. **Download & install [MacroDroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app**
    
 **Recommended:** Purchase its pro license.
 
-3. **ZArchiver (Image Viewer for QR Login):** **Download [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
+3. **Download & install [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
+
+4. **Download & install [Shizuku](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
+(Run it on your device using wireless debugging. You can search for how to run it on youtube, and choose the appropriate way to run it for your specific device.).
 ---
 
 ## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
@@ -89,11 +92,10 @@ Before starting the automation, prepare a **second phone** that has the official
 
 ---
 
-## Section 6: Step 5 - Run Shizuku on your device using wireless debugging
+## Section 6: Step 5 - Complete the initial setup via tutorial
 
-1. **Download the Latest Shizuku app and install it on your device.
-2. **Run it on your device using wireless debugging. You can search for how to run it on youtube, and choose the appropriate way to run it for your specific device.
-3. When Shizuku is successfully running, visit this telegram channel for initial setup tutorial.
+1. **Ensure the Shizuku app is installed and running on your device.
+2. Visit this telegram channel for initial setup tutorial video.
 
 All done!
 
