@@ -95,6 +95,7 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 
 1. Ensure the Shizuku app is installed and running on your device.
 2. Open Macrodroid and follow the [tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video.
+3. Now when everything is completed, change the minimum width/dpi of your device to 600 via developer settings in settings app. Then you can start the automation by toggling the macrodroid switch.
 
 All done!
 
