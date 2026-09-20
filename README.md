@@ -1,4 +1,4 @@
-# 👑 SMM Kingdom Tasks Automation Bot (Android 11+)
+# 👑 SMM Kingdom Tasks Automation Bot 
 
 A fully automated, background task-completion engine built for **@SmmKingdomTasksBot**. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
 
@@ -9,7 +9,8 @@ A fully automated, background task-completion engine built for **@SmmKingdomTask
 Before installing any files, configure your Android phone with these required settings:
 
 **System Language:** Set your Android phone language to **English (United States or English UK)**. 
-   * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**. 
+   * *App-specific alternative:* If you prefer to keep your phone in another language, go to **Settings → Apps** and manually set the individual language for **Chrome** and **Instagram** to **English**.
+**Ram** 4GB recommended
 
 **Note:** The language inside `@SmmKingdomTasksBot` on Telegram must also be set to English.
 
@@ -101,9 +102,7 @@ All licenses are strictly bound to your hardware via security verification. Shar
 
 | Package | Validity | Price |
 | :--- | :--- | :--- |
-| **Basic (1 Device)** | 90 Days | **$25 USDT** |
-| **Standard (4 Devices)** | 90 Days | **$50 USDT** |
-| **Premium (4 Devices)** | 180 Days | **$90 USDT** |
+| **Pro (1 Device)** | 30 Days | **$10 USDT** |
 
 ### Accepted Crypto
 **USDT (TON Network)**
@@ -127,12 +126,11 @@ Copy the address above and ensure you are strictly sending **USDT-TON**. Sending
 
 **If you need to apply a new license key or renew an expired one, you can update it quickly without reinstalling the bot.**
 
-1. Open Termux. (If your bot is currently running, type 2 and press Enter to exit to the command line).
-2. Copy and paste the following command into Termux and press Enter:
+1. Copy and paste the following command into Termux and press Enter:
 
    
 ```bash
 curl -sL -o license.py https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py && python license.py && rm license.py
 ```
 
-3. Paste your new license key when prompted and press Enter.
+2. Paste your new license key when prompted and press Enter.
