@@ -8,7 +8,7 @@ Before purchasing, please ensure your device meets the following criteria:
 *   **Supported OS:** Android 11 and above. 
 *   **Architecture:** 32-bit and 64-bit devices are fully supported.
 *   **Minimum Hardware:** 4GB RAM is recommended for stable background processing.
-*   **Tested & Confirmed:** Devices running Android 11 to 14 with standard manufacturer UIs (e.g., Samsung, Xiaomi, Pixel).
+*   **Tested & Confirmed:** Devices running Android 11 to 16 with standard manufacturer UIs.
 *   **Untested:** Non-standard custom Android ROMs.
 *   **Known Incompatible:** Android 10 and below, or very low-end hardware configurations (these will experience system instability or background task killing).
 *   **Display Limitation (600 dp):** The current version relies on fixed screen coordinates, which requires changing your device's "Smallest width" to 600 dp via developer settings. **Warning:** This will significantly reduce the size of your entire Android interface, making text and icons much smaller, which may be less comfortable for normal everyday phone use.
@@ -51,7 +51,7 @@ Install these four tools onto your device:
 1. Open **Termux**.
 2. Paste the following command and press **Enter**: 
    ```bash
-   bash <(curl -sL [https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh](https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh))
+   bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh)
    ```
 3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
 4. When prompted by the setup wizard, input your details line by line:
@@ -98,7 +98,7 @@ All licenses are strictly bound to your hardware via security verification. Shar
 | **Pro (1 Device)** | 30 Days | **$10 USDT** |
 
 **Accepted Crypto: USDT (TON Network)**
-```text
+```bash
 UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP
 ```
 
@@ -115,6 +115,6 @@ Before sending any payment, please contact the [@Developer](https://t.me/iamraja
 If you need to apply a new license key or renew an expired one, you can update it quickly without reinstalling the bot.
 1. Copy and paste the following command into Termux and press **Enter**: 
    ```bash
-   curl -sL -o license.py [https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py](https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py) && python license.py && rm license.py
+   curl -sL -o license.py https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py && python license.py && rm license.py
    ```
 2. Paste your new license key when prompted and press **Enter**.
