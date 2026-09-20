@@ -21,7 +21,7 @@ Before installing any files, configure your Android phone with these exact setti
 2.  **Required System Permissions:** You must manually grant the following permissions when prompted. Do not skip any, or the bot will fail:
     *   **Accessibility:** Required for MacroDroid to interact with the screen.
     *   **Display Over Other Apps:** Required for automation overlays.
-    *   **Files & Storage / Media:** Required for ZArchiver and Termux to read and write your session files.
+    *   **Files & Storage / Media:** Required for ZArchiver, Termux & Macrodroid to read and write system files.
     *   **Camera:** Required for the Telegram QR scanner.
     *   **Battery Optimization (Unrestricted):** You must set Termux, MacroDroid, and Shizuku to "Unrestricted" or "No Restrictions" in your Android battery settings to prevent the system from killing them in the background.
 3.  **App Pinning / Locking:** After completing the whole setup, lock both Termux and MacroDroid in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
