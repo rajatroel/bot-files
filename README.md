@@ -73,17 +73,17 @@ bash <(curl -sL https://raw.githubusercontent.com/rajatroel/bot-files/main/insta
    * **API Hash:** Paste your alphanumeric API Hash → Press **Enter**.
    * **License Key:** Paste your license key (e.g., `SMMK-1D-XXXX-XXXX-XXXX`) → Press **Enter**.
    * **Instagram Usernames:** Paste each Instagram account display name one by one, pressing **Enter** after each name.
-5. When all accounts have been entered, press **Enter on an empty line** to save your configuration.
+5. When all accounts have been entered, prepare your second phone as given in next section.
 
 ---
 
 ## 📷 Section 5: Step 4 — One-Time Telegram QR Login
 
-Before starting the automation, prepare a **second phone** that has the official Telegram app logged into your target number.
+Prepare a **second phone** that has the official Telegram app logged into your target number.
 
 1. **Prepare the Scanner:** On your second phone, open Telegram and navigate to **Settings → Devices → Link Desktop Device**. 
    * *Troubleshooting:* If the camera shows a black screen, go to your Android Settings → Apps → Telegram → Permissions, and allow **Camera** access. Verify the camera is working in Telegram.
-2. **Generate QR Code:** In Termux (on your main phone), type `1` and hit **Enter** to start the script and generate the QR code.
+2. **Generate QR Code:** In Termux (on your main phone), Press **Enter** to start the script and generate the QR code.
 3. **Open & Scan:** When prompted on your main screen, choose to open the file with **ZArchiver**. Immediately scan the QR code using your second phone.
 4. **2FA Password:** If your Telegram account has Two-Step Verification enabled, Termux will prompt you for your password. Type it in and press **Enter**.
 5. **Success:** Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage. You will see a new device logged in on your Telegram app.
