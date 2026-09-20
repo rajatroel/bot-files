@@ -55,7 +55,7 @@ Install these four tools onto your device:
 3. **Download & install [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 
-4. **Download & install [Shizuku](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
+4. **Download & install [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app**.
 (Run it on your device using wireless debugging. You can search for how to run it on youtube, for your specific device.).
 ---
 
