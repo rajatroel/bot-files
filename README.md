@@ -56,7 +56,7 @@ Install these four tools onto your device:
 (After downloading Zarchiver, open it and allow permissions then close it simply).
 
 4. **Download & install [Shizuku](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app**.
-(Run it on your device using wireless debugging. You can search for how to run it on youtube, and choose the appropriate way to run it for your specific device.).
+(Run it on your device using wireless debugging. You can search for how to run it on youtube, for your specific device.).
 ---
 
 ## 💻 Section 4: Step 3 — Run Termux Installer & Configuration
