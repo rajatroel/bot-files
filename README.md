@@ -5,8 +5,6 @@
 [![Setup](https://img.shields.io/badge/setup-MacroDroid-orange?style=flat-square)](#11-macrodroid-installation)
 [![Support](https://img.shields.io/badge/support-%40iamrajatroel-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/iamrajatroel)
 
-**[Compatibility](#2-compatibility-requirements)** • **[Installation](#12-complete-installation-sequence)** • **[Daily Use](#14-daily-use)** • **[Troubleshooting](#15-troubleshooting)** • **[Support](#16-contacting-technical-support)**
-
 ## 1. Current Version Information
 
 | Item | Details |
