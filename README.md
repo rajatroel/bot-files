@@ -47,34 +47,20 @@
 
 | Android Version | Status |
 |:----------------|:-------|
-| **Android 10** | ❌ Unsupported (Known Incompatible) |
-| **Android 11** | ✅ Tested / Supported |
-| **Android 12** | ✅ Tested / Supported |
-| **Android 13** | ✅ Tested / Supported |
-| **Android 14** | ✅ Tested / Supported |
-| **Android 15** | ✅ Tested / Supported |
-| **Android 16** | ✅ Tested / Supported |
-
-**Status definitions**
-
-| Status | Definition |
-|:-------|:-----------|
-| **Tested** | Physically tested by the developer/test team and confirmed working. |
-| **Supported** | Officially supported, although not necessarily tested on every device model. |
-| **Untested** | Compatibility has not yet been verified. Untested does **NOT** mean supported. |
-| **Unsupported** | Known not to work reliably with the current version. |
+| **Android 10** | ❌ Unsupported |
+| **Android 11** | ✅ Supported |
+| **Android 12** | ✅ Supported |
+| **Android 13** | ✅ Supported |
+| **Android 14** | ✅ Supported |
+| **Android 15** | ✅ Supported |
+| **Android 16** | ✅ Supported |
 
 ## 3. 32-bit / 64-bit Compatibility
 
 | Architecture | Status |
 |:-------------|:-------|
-| **32-bit Android** | ✅ Tested / Supported |
-| **64-bit Android** | ✅ Tested / Supported |
-
-- **How to check device architecture:** Download a free device information app from the Google Play Store to verify your architecture.
-
-> [!NOTE]
-> If the user is unsure whether the phone is 32-bit or 64-bit, instruct them to contact support **BEFORE** purchasing.
+| **32-bit Android** | ✅ Supported |
+| **64-bit Android** | ✅ Supported |
 
 ## 4. Hardware Requirements
 
