@@ -71,10 +71,18 @@ Very low-end hardware configurations (these will experience system instability o
 7. (If available) **Disable child process restrictions:** Set to `ON`.
 8. (If available) **USB security settings:** Set to `ON`.
 
-## 6. Shizuku Setup
+## 6. Install Required Applications
+Install these four tools onto your device:
+
+1. **Termux:** Download & install the [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app.
+2. **MacroDroid:** Download & install the [Macrodroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app (Recommended: Purchase its pro license).
+3. **ZArchiver:** Download & install the [Zarchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app. (After downloading Zarchiver, open it and allow permissions then close it simply).
+4. **Shizuku:** Download & install the [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app.
+
+## 7. Shizuku Setup
 
 1. **Installation:** Install the Shizuku application.
-2. **Start Shizuku:** Run it on your device using wireless debugging. You can search for how to do it on youtube, for your specific device.
+2. **Start Shizuku:** Run it on your device using wireless debugging. You can search for how to run it on YouTube, for your specific device.
 3. **Verify Shizuku:** Ensure Shizuku is running properly on your device.
 
 > [!IMPORTANT]
@@ -83,7 +91,7 @@ Very low-end hardware configurations (these will experience system instability o
 > [!NOTE]
 > **After phone reboot:** Shizuku needs to be started again via Wireless Debugging.
 
-## 7. Generate Telegram API ID & Hash
+## 8. Generate Telegram API ID & Hash
 The bot connects directly to the Telegram network and binds your license to your unique Telegram credentials.
 
 > **Crucial:** You must generate your API ID and Hash using the exact Telegram phone number you will be using to run the automation bot.
@@ -95,14 +103,6 @@ The bot connects directly to the Telegram network and binds your license to your
 5. Fill in the required fields: App title (e.g., `Runner`), Short name (e.g., `runner1`). URL and Platform fields can be left default/empty.
 6. Click **Create application**.
 7. Copy your **`api_id`** (numeric string) and **`api_hash`** (alphanumeric string) and save them securely in your Notes app.
-
-## 8. Install Required Applications
-Install these four tools onto your device:
-
-1. **Termux:** Download & install the [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app.
-2. **MacroDroid:** Download & install the [Macrodroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app (Recommended: Purchase its pro license).
-3. **ZArchiver:** Download & install the [Zarchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app. (After downloading Zarchiver, open it and allow permissions then close it simply).
-4. **Shizuku:** Download & install the [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app. Run it on your device using wireless debugging. (You can search for how to run it on YouTube, for your specific device).
 
 
 ## 9. Run Termux Installer & Configuration
