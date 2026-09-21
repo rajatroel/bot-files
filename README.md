@@ -7,11 +7,6 @@
 
 **[Compatibility](#2-compatibility-requirements)** • **[Installation](#12-complete-installation-sequence)** • **[Daily Use](#14-daily-use)** • **[Troubleshooting](#15-troubleshooting)** • **[Support](#16-contacting-technical-support)**
 
-</div>
-
-> [!IMPORTANT]
-> Please read the [Compatibility Requirements](#2-compatibility-requirements) and [Current Version Limitations](#5-important---current-macrodroid-version-limitations) **BEFORE** purchasing a license. Do not purchase until the device has been checked against the verified requirements below.
-
 ## Table of Contents
 
 1. [Current Version Information](#1-current-version-information)
