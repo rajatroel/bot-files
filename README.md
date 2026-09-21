@@ -67,8 +67,7 @@
 | Category | Details |
 |:---------|:--------|
 | **RAM** | 4GB Minimum Recommended. |
-| **Tested devices** | Devices running Android 11 to 16 with standard manufacturer UIs are working. |
-| **Untested configurations** | Non-standard custom Android ROMs are untested. |
+| **Storage** | 4GB Minimum Recommended. |
 | **Known incompatible configurations** | Very low-end hardware configurations (these will experience system instability or background task killing). |
 
 ## 5. Important - Current MacroDroid Version Limitations
@@ -112,9 +111,6 @@
 | **ZArchiver** | Download from the Play Store. |
 | **Instagram** | Official app required. |
 | **Telegram** | Official app required. |
-
-> [!IMPORTANT]
-> Do not direct customers to random APK files or unknown download sources.
 
 ## 7. Required Android Settings & Permissions
 
