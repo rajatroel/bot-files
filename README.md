@@ -55,11 +55,6 @@
 | **Android 15** | ✅ Supported |
 | **Android 16** | ✅ Supported |
 
-| Architecture | Status |
-|:-------------|:-------|
-| **32-bit Android** | ✅ Supported |
-| **64-bit Android** | ✅ Supported |
-
 ## 4. Hardware Requirements
 
 | Category | Details |
@@ -86,8 +81,6 @@ Very low-end hardware configurations (these will experience system instability o
 | **MacroDroid** | English required. |
 
 > [!NOTE]
-> The Android system can remain in another language while individual apps (like Chrome and Instagram) use English.
->
 > The language restrictions described here apply to the **CURRENT** MacroDroid version.
 
 ### Minimum width - 600 dp
