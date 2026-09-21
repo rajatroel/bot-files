@@ -30,7 +30,7 @@ A fully automated, background task-completion engine built for @SmmKingdomTasksB
 | **Android 15** | ✅ Supported |
 | **Android 16** | ✅ Supported |
 
-## 4. Hardware Requirements
+## 3. Hardware Requirements
 
 | Category | Details |
 |:---------|:--------|
@@ -40,7 +40,7 @@ A fully automated, background task-completion engine built for @SmmKingdomTasksB
 **Known incompatible configurations**
 Very low-end hardware configurations (these will experience system instability or background task killing).
 
-## 5. Important - Current MacroDroid Version Limitations
+## 4. Important - Current MacroDroid Version Limitations
 
 > [!WARNING]
 > The current version requires Android system changes. The changes described here apply to the **CURRENT** MacroDroid version.
@@ -60,7 +60,7 @@ Very low-end hardware configurations (these will experience system instability o
 - The current MacroDroid automation uses fixed screen coordinates. Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
 
 
-## 8. Developer Options Setup
+## 5. Developer Options Setup
 
 1. Enable Developer Options/settings.
 2. Open **Developer Options/settings**.
@@ -71,7 +71,7 @@ Very low-end hardware configurations (these will experience system instability o
 7. (If available) **Disable child process restrictions:** Set to `ON`.
 8. (If available) **USB security settings:** Set to `ON`.
 
-## 9. Shizuku Setup
+## 6. Shizuku Setup
 
 1. **Installation:** Install the Shizuku application.
 2. **Start Shizuku:** Run it on your device using wireless debugging. You can search for how to do it on youtube, for your specific device.
@@ -83,7 +83,7 @@ Very low-end hardware configurations (these will experience system instability o
 > [!NOTE]
 > **After phone reboot:** Shizuku needs to be started again via Wireless Debugging.
 
-## 10. Generate Telegram API ID & Hash
+## 7. Generate Telegram API ID & Hash
 The bot connects directly to the Telegram network and binds your license to your unique Telegram credentials.
 
 > **Crucial:** You must generate your API ID and Hash using the exact Telegram phone number you will be using to run the automation bot.
@@ -96,7 +96,7 @@ The bot connects directly to the Telegram network and binds your license to your
 6. Click **Create application**.
 7. Copy your **`api_id`** (numeric string) and **`api_hash`** (alphanumeric string) and save them securely in your Notes app.
 
-## 📲 Section 4: Step 2 — Install Required Applications
+## 8. Install Required Applications
 Install these four tools onto your device:
 
 1. **Termux:** Download & install the [Termux](https://github.com/rajatroel/bot-files/releases/download/v1.0/termux.apk) app.
@@ -105,22 +105,7 @@ Install these four tools onto your device:
 4. **Shizuku:** Download & install the [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app. Run it on your device using wireless debugging. (You can search for how to run it on YouTube, for your specific device).
 
 
-## 7. Required Android Settings &
-Permissions
-
-| Application | Setting | Required State |
-|:------------|:--------|:---------------|
-| **MacroDroid** | Accessibility | Must be ON |
-| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
-| **MacroDroid** | Display over other apps | Must be ON |
-| **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
-| **Termux** | Files & Storage / Media | Must be ON |
-| **Shizuku** | Battery optimization | Must be Unrestricted / No Restrictions |
-| **Shizuku** | Wireless debugging | Must be ON |
-| **ZArchiver** | Files & Storage / Media | Must be ON |
-| **Telegram on other device** | Camera access | Must be ON (required for the Telegram QR scanner) |
-
-## 💻 Section 5: Step 3 — Run Termux Installer & Configuration
+## 9. Run Termux Installer & Configuration
 1. Open **Termux**.
 2. Paste the following command and press **Enter**: 
    ```bash
@@ -134,7 +119,7 @@ Permissions
    * **Instagram Usernames:** Paste each Instagram account display name one by one, pressing **Enter** after each name.
 5. When all accounts have been entered, prepare your second phone as given in the next section.
 
-## 📷 Section 6: Step 4 — One-Time Telegram QR Login
+## 10. One-Time Telegram QR Login
 Prepare a **second phone** that has the official Telegram app logged into your target number.
 
 1. **Prepare the Scanner:** On your second phone, open Telegram and navigate to **Settings → Devices → Link Desktop Device**. (If the camera shows a black screen, go to your Android Settings → Apps → Telegram → Permissions, and allow **Camera** access. Verify the camera is working in Telegram).
@@ -144,15 +129,29 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 5. **Success:** Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage. You will see a new device logged in on your Telegram app.
 6. **Safe Exit:** Press the back button on your main phone to exit the image. To securely close Termux, swipe it away from your Recent Apps menu, reopen Termux, pull down your Android notification panel, and tap **Exit**.
 
-## ⚙️ Section 7: Step 5 — Complete the Initial Setup
+## 11. Complete the Initial Setup
 1. Ensure the **Shizuku** app is installed and running on your device.
 2. Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file to your phone's `Download` folder.
 3. Open **MacroDroid** → tap the **Export/Import** tile on the home screen. Check the box for **Reset variables on import**. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your Download folder, and tap **Clear existing and import all**.
 4. Change the minimum width/dpi of your device to **600** via developer settings in your settings app.
 5. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for any further MacroDroid adjustments.
-6. Start the automation by toggling the MacroDroid switch. 
+6. Start the automation by toggling the MacroDroid switch.
 
-## 🛠 Section 8: Troubleshooting Common Issues
+## 12. Required Android Settings &
+Permissions
+
+Ensure these permissions and settings are enabled.
+
+| Application | Setting | Required State |
+|:------------|:--------|:---------------|
+| **MacroDroid** | Accessibility | Must be ON |
+| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
+| **MacroDroid** | Display over other apps | Must be ON |
+| **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
+| **Termux** | Files & Storage / Media | Must be ON |
+| **Shizuku** | Battery optimization | Must be Unrestricted / No Restrictions |
+
+## 13. Troubleshooting Common Issues
 If you encounter problems during setup or daily operation, check these solutions before contacting support:
 
 *   **Automation stops or MacroDroid closes:** Ensure both MacroDroid and Shizuku are set to "Unrestricted" in your Android Battery settings and are locked in the Recent Apps menu.
@@ -163,7 +162,7 @@ If you encounter problems during setup or daily operation, check these solutions
 *   **Permissions become disabled:** Android occasionally revokes Accessibility permissions for security if an app isn't actively opened. Re-enable them in Settings → Accessibility.
 *   **Contacting Support:** If an issue persists, please contact support and include: 1) Your exact device model and Android version, 2) A clear screenshot or screen recording of the error, and 3) A screenshot of your Developer Options showing your screen is set to 600 dp.
 
-## 💳 Section 9: License Package & Purchasing
+## 14. License Package & Purchasing
 All licenses are strictly bound to your hardware via security verification. Sharing your license key with another user is prohibited and will result in a permanent system ban and loss of access for your devices. Please keep your key private.
 
 | Package | Validity | Price |
@@ -177,14 +176,14 @@ UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP
 
 Copy the address above and ensure you are strictly sending **USDT-TON**. Sending tokens from other networks (like TRC-20 or ERC-20) to this address will result in the permanent loss of your funds.
 
-### How to Order Your License
+### 15. How to Order Your License
 Before sending any payment, please contact the [@Developer](https://t.me/iamrajatroel). Once confirmed by the developer, follow these steps:
 1. Send the exact plan amount to the payment address above.
 2. Take a clear screenshot of the completed transaction receipt.
 3. Send the screenshot to **[@Developer](https://t.me/iamrajatroel)** on Telegram.
 4. Your unique license key and its information will be delivered to your chat within 5 minutes.
 
-### 🔑 How to Update Your License Key
+### 16. How to Update Your License Key
 If you need to apply a new license key or renew an expired one, you can update it quickly without reinstalling the bot.
 1. Copy and paste the following command into Termux and press **Enter**: 
    ```bash
@@ -192,21 +191,7 @@ If you need to apply a new license key or renew an expired one, you can update i
    ```
 2. Paste your new license key when prompted and press **Enter**.
 
-## 13. First Run
-
-- **Start the automation:** Toggle the MacroDroid switch.
-- **How do I know it is working?** The bot will automate Instagram Likes, Comments, account switching, and captcha solving in the background.
-
-### First-run test
-
-- [ ] Instagram opens correctly
-- [ ] Correct account is used
-- [ ] Link opens correctly
-- [ ] Automation performs expected action
-- [ ] Telegram communication works
-- [ ] No permission errors appear
-
-## 14. Daily Use
+## 17. Other Useful Information
 
 | Topic | Details |
 |:------|:--------|
@@ -216,18 +201,6 @@ If you need to apply a new license key or renew an expired one, you can update i
 | **Must Termux stay open?** | Yes, lock it in your phone's Recent Apps screen so Android's memory manager never kills it. |
 | **Must MacroDroid stay open?** | Yes, lock it in your phone's Recent Apps screen. |
 | **Must Shizuku remain running?** | Yes. |
-
-## 15. Troubleshooting
-
-| Problem | Solution |
-|:--------|:---------|
-| **MacroDroid stops working** | Ensure both MacroDroid and Shizuku are set to "Unrestricted" in your Android Battery settings and are locked in the Recent Apps menu. |
-| **Termux stops / closes in background** | Lock Termux in the Recent Apps menu and verify battery optimization is disabled for it. |
-| **Accessibility permission turns off** | Android occasionally revokes Accessibility permissions for security if an app isn't actively opened; re-enable them in Settings → Accessibility. |
-| **Instagram link cannot be opened** | Ensure your default browser or link-handling settings are correctly routing straight to the Instagram app. |
-| **Captcha fails** | Ensure your device resolution is strictly set to exactly `600 dp` in Developer Options. If it is even slightly off, fixed coordinates will miss the target. |
-| **Telegram authentication fails** | Ensure you used the exact API ID and Hash linked to the phone number on the device. |
-| **QR camera is black** | Go to your Android Settings → Apps → Telegram → Permissions, and allow Camera access. |
 
 ## 16. Contacting Technical Support
 
@@ -247,33 +220,20 @@ If you need to apply a new license key or renew an expired one, you can update i
 - **Support contact:** Contact [@iamrajatroel](https://t.me/iamrajatroel) on Telegram.
 - Technical support is handled directly by the developer.
 
-## 17. License & Purchase
-
-- **Price:** $10 USDT / device / 30 days
-- **Before purchasing:** Confirm that the device meets the [compatibility requirements](#2-compatibility-requirements) above.
-- **Purchase:** Send the exact plan amount to the USDT (TON Network) address `UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP`, take a clear screenshot of the completed transaction receipt, and send it to [@iamrajatroel](https://t.me/iamrajatroel).
-- **Activation:** Your unique license key and its information will be delivered to your chat within few minutes.
-- **Renewal:** Paste the following command in Termux, press Enter, and paste your new license key when prompted.
-
-  ```bash
-  curl -sL -o license.py https://raw.githubusercontent.com/rajatroel/bot-files/main/license.py && python license.py && rm license.py
-  ```
-
-## 18. Updates & Changelog
+## 17. Updates & Changelog
 
 - **Current version:** v1.0
 - **Release date:** September 21, 2026
 - **Added:** Initial release of the fully automated, background task-completion engine with intelligent AI-powered vision captcha solving.
 
-## 19. Known Issues
+## 18. Known Issues
 
 > [!NOTE]
 > No confirmed known issues beyond the documented 600 dp resolution requirement and the Android 10 and below incompatibility at this time.
 
-## 20. Before You Buy - Final Checklist
+## 19. Before You Buy - Final Checklist
 
 - [ ] My Android version is supported.
-- [ ] My device architecture is supported.
 - [ ] My device meets the hardware requirements.
 - [ ] I understand the current 600 dp requirement.
 - [ ] I understand the current language requirements.
@@ -282,7 +242,7 @@ If you need to apply a new license key or renew an expired one, you can update i
 - [ ] I have read the known limitations.
 - [ ] I know how to contact technical support.
 
-## 21. Future Dedicated App
+## 20. Future Dedicated App
 
 - A standalone application is planned/developed separately from the current MacroDroid version.
 - The goal is to reduce manual configuration, improve screen/DPI adaptability and provide broader language support.
