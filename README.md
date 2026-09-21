@@ -22,7 +22,7 @@ A fully automated, background task-completion engine built for @SmmKingdomTasksB
 
 | Android Version | Status |
 |:----------------|:-------|
-| **Android 10** | ❌ Unsupported |
+| **Android 10 and below** | ❌ Unsupported |
 | **Android 11** | ✅ Supported |
 | **Android 12** | ✅ Supported |
 | **Android 13** | ✅ Supported |
@@ -133,8 +133,10 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 1. Ensure the **Shizuku** app is installed and running on your device.
 2. Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file to your phone's `Download` folder.
 3. Ensure you device minimum width/dpi is set to 600.
-4. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for any further MacroDroid adjustments.
+4. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for further MacroDroid adjustments.
 5. Start the automation by toggling the MacroDroid switch.
+
+All done!
 
 ## 12. Required Android Settings &
 Permissions
