@@ -81,7 +81,7 @@ Install these four tools onto your device:
 
 ## 7. Shizuku Setup
 
-1. **Installation:** Install the Shizuku application.
+1. **Installation:** Ensure Shizuku is installed on your device.
 2. **Start Shizuku:** Run it on your device using wireless debugging. You can search for how to run it on YouTube, for your specific device.
 3. **Verify Shizuku:** Ensure Shizuku is running properly on your device.
 
