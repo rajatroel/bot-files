@@ -9,11 +9,11 @@
 
 | Item | Details |
 |:-----|:--------|
-| **Product version** | v1.0 |
-| **Setup type** | MacroDroid-based automation |
+| **Current version** | v1.0 |
+| **Setup type** | MacroDroid based |
 | **Documentation last updated** | September 21, 2026 |
-| **Current license price** | $10 USDT / device / 30 days |
-| **Developer / Support contact** | [@iamrajatroel](https://t.me/iamrajatroel) on Telegram |
+| **License price** | $10 per month |
+| **Support contact** | [@iamrajatroel](https://t.me/iamrajatroel) |
 
 ## 2. Compatibility Requirements
 
@@ -40,7 +40,7 @@ Very low-end hardware configurations (these will experience system instability o
 ## 5. Important - Current MacroDroid Version Limitations
 
 > [!WARNING]
-> The current version requires Android system changes.
+> The current version requires Android system changes. The changes described here apply to the **CURRENT** MacroDroid version.
 
 ### Language requirements
 
@@ -52,24 +52,18 @@ Very low-end hardware configurations (these will experience system instability o
 | **Telegram / Telegram bot** | English required. |
 | **MacroDroid** | English required. |
 
-> [!NOTE]
-> The language restrictions described here apply to the **CURRENT** MacroDroid version.
-
 ### Minimum width - 600 dp
 
-- The current MacroDroid automation uses fixed screen coordinates.
-
-> [!IMPORTANT]
-> Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
+- The current MacroDroid automation uses fixed screen coordinates. Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
 
 ## 6. Required Applications
 
 | Application | Requirement / Source |
 |:------------|:---------------------|
-| **MacroDroid** | Purchase its pro license from the Play Store. |
-| **Termux** | Download the verified `termux.apk` from the provided GitHub release source. |
-| **Shizuku** | Download the verified `Shizuku.apk` from the provided GitHub release source. |
-| **ZArchiver** | Download from the Play Store. |
+| **MacroDroid** | Download and purchase its pro license. |
+| **Termux** | Download and install it on your device. |
+| **Shizuku** | Download, install and run it on your device. |
+| **ZArchiver** | Download and open it once to grant necessary permissions.|
 | **Instagram** | Official app required. |
 | **Telegram** | Official app required. |
 
@@ -78,7 +72,7 @@ Very low-end hardware configurations (these will experience system instability o
 | Application | Setting | Required State |
 |:------------|:--------|:---------------|
 | **MacroDroid** | Accessibility | Must be ON |
-| **MacroDroid** | Battery optimization | Must be Unrestricted / No Restrictions |
+| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
 | **MacroDroid** | Display over other apps | Must be ON |
 | **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
 | **Termux** | Files & Storage / Media | Must be ON |
