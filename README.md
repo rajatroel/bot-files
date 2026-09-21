@@ -55,8 +55,6 @@
 | **Android 15** | ✅ Supported |
 | **Android 16** | ✅ Supported |
 
-## 3. 32-bit / 64-bit Compatibility
-
 | Architecture | Status |
 |:-------------|:-------|
 | **32-bit Android** | ✅ Supported |
@@ -68,25 +66,16 @@
 |:---------|:--------|
 | **RAM** | 4GB Minimum Recommended. |
 | **Storage** | 4GB Minimum Recommended. |
-| **Known incompatible configurations** | Very low-end hardware configurations (these will experience system instability or background task killing). |
+
+**Known incompatible configurations**
+Very low-end hardware configurations (these will experience system instability or background task killing).
 
 ## 5. Important - Current MacroDroid Version Limitations
 
 > [!WARNING]
-> The current version requires Android system changes. These limitations must be visible **BEFORE** purchase.
+> The current version requires Android system changes.
 
-### 5.1 Screen scaling - 600 dp
-
-- The current MacroDroid automation uses fixed screen coordinates.
-- For correct operation, set `Developer Options -> Smallest width / Minimum width -> 600 dp`.
-
-> [!IMPORTANT]
-> Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
-
-- Before changing the setting, **WRITE DOWN OR SCREENSHOT THE ORIGINAL VALUE.**
-- If the user stops using the automation, restore the original value.
-
-### 5.2 Language requirements
+### Language requirements
 
 | Application | Language Requirement |
 |:------------|:---------------------|
@@ -99,7 +88,14 @@
 > [!NOTE]
 > The Android system can remain in another language while individual apps (like Chrome and Instagram) use English.
 >
-> The language restrictions described here apply to the **CURRENT** MacroDroid version. Planned standalone-app capabilities must be described separately.
+> The language restrictions described here apply to the **CURRENT** MacroDroid version.
+
+### Minimum width - 600 dp
+
+- The current MacroDroid automation uses fixed screen coordinates.
+
+> [!IMPORTANT]
+> Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
 
 ## 6. Required Applications
 
@@ -124,15 +120,22 @@
 | **Shizuku** | Battery optimization | Must be Unrestricted / No Restrictions |
 | **Shizuku** | Wireless debugging | Must be ON |
 | **ZArchiver** | Files & Storage / Media | Must be ON |
-| **Telegram** | Camera access | Must be ON (required for the Telegram QR scanner) |
+| **Telegram on other device** | Camera access | Must be ON (required for the Telegram QR scanner) |
 
 ## 8. Developer Options Setup
 
-1. Open `Settings -> About phone`.
-2. Enable Developer Options by tapping the **build number**.
-3. Open **Developer Options**.
-4. **Smallest width / Minimum width:** Set to `600 dp`.
+1. Enable Developer Options/settings.
+2. Open **Developer Options/settings**.
+3. **Smallest width / Minimum width:** Set to `600 dp`.
+4. **USB debugging:** Set to `ON`.
 5. **Wireless debugging:** Set to `ON`.
+6. **Disable permission monitoring:** Set to `ON`.
+7. **Disable child process restrictions:** Set to `ON`.
+
+**IMPORTANT:**
+If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
+1. **USB security settings:** Set to `ON`.
+2. 
 
 ## 9. Shizuku Setup
 
