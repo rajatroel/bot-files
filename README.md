@@ -7,32 +7,6 @@
 
 **[Compatibility](#2-compatibility-requirements)** • **[Installation](#12-complete-installation-sequence)** • **[Daily Use](#14-daily-use)** • **[Troubleshooting](#15-troubleshooting)** • **[Support](#16-contacting-technical-support)**
 
-## Table of Contents
-
-1. [Current Version Information](#1-current-version-information)
-2. [Compatibility Requirements](#2-compatibility-requirements)
-3. [32-bit / 64-bit Compatibility](#3-32-bit--64-bit-compatibility)
-4. [Hardware Requirements](#4-hardware-requirements)
-5. [Important - Current MacroDroid Version Limitations](#5-important---current-macrodroid-version-limitations)
-   - [5.1 Screen scaling - 600 dp](#51-screen-scaling---600-dp)
-   - [5.2 Language requirements](#52-language-requirements)
-6. [Required Applications](#6-required-applications)
-7. [Required Android Settings & Permissions](#7-required-android-settings--permissions)
-8. [Developer Options Setup](#8-developer-options-setup)
-9. [Shizuku Setup](#9-shizuku-setup)
-10. [Termux Setup](#10-termux-setup)
-11. [MacroDroid Installation](#11-macrodroid-installation)
-12. [Complete Installation Sequence](#12-complete-installation-sequence)
-13. [First Run](#13-first-run)
-14. [Daily Use](#14-daily-use)
-15. [Troubleshooting](#15-troubleshooting)
-16. [Contacting Technical Support](#16-contacting-technical-support)
-17. [License & Purchase](#17-license--purchase)
-18. [Updates & Changelog](#18-updates--changelog)
-19. [Known Issues](#19-known-issues)
-20. [Before You Buy - Final Checklist](#20-before-you-buy---final-checklist)
-21. [Future Dedicated App](#21-future-dedicated-app)
-
 ## 1. Current Version Information
 
 | Item | Details |
