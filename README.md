@@ -144,7 +144,7 @@ Ensure these permissions and settings are enabled.
 | Application | Setting | Required State |
 |:------------|:--------|:---------------|
 | **MacroDroid** | Accessibility | Must be ON |
-| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
+| **MacroDroid** | Battery optimization | Must be Unrestricted / No Restrictions |
 | **MacroDroid** | Display over other apps | Must be ON |
 | **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
 | **Termux** | Files & Storage / Media | Must be ON |
