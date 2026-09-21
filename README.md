@@ -132,10 +132,9 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 ## 11. Complete the Initial Setup
 1. Ensure the **Shizuku** app is installed and running on your device.
 2. Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file to your phone's `Download` folder.
-3. Open **MacroDroid** → tap the **Export/Import** tile on the home screen. Check the box for **Reset variables on import**. Tap **Storage** (under Import), select the downloaded `backup.mdr` file from your Download folder, and tap **Clear existing and import all**.
-4. Change the minimum width/dpi of your device to **600** via developer settings in your settings app.
-5. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for any further MacroDroid adjustments.
-6. Start the automation by toggling the MacroDroid switch.
+3. Ensure you device minimum width/dpi is set to 600.
+4. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for any further MacroDroid adjustments.
+5. Start the automation by toggling the MacroDroid switch.
 
 ## 12. Required Android Settings &
 Permissions
@@ -177,10 +176,10 @@ UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP
 Copy the address above and ensure you are strictly sending **USDT-TON**. Sending tokens from other networks (like TRC-20 or ERC-20) to this address will result in the permanent loss of your funds.
 
 ### 15. How to Order Your License
-Before sending any payment, please contact the [@Developer](https://t.me/iamrajatroel). Once confirmed by the developer, follow these steps:
+Before sending any payment, please contact the [Support](https://t.me/iamrajatroel). Once confirmed by the developer, follow these steps:
 1. Send the exact plan amount to the payment address above.
 2. Take a clear screenshot of the completed transaction receipt.
-3. Send the screenshot to **[@Developer](https://t.me/iamrajatroel)** on Telegram.
+3. Send the screenshot to **[Support](https://t.me/iamrajatroel)** on Telegram.
 4. Your unique license key and its information will be delivered to your chat within 5 minutes.
 
 ### 16. How to Update Your License Key
