@@ -122,46 +122,42 @@ Very low-end hardware configurations (these will experience system instability o
 3. **Smallest width / Minimum width:** Set to `600 dp`.
 4. **USB debugging:** Set to `ON`.
 5. **Wireless debugging:** Set to `ON`.
-6. **Disable permission monitoring:** Set to `ON`.
-7. **Disable child process restrictions:** Set to `ON`.
-
-**IMPORTANT:**
-If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
-1. **USB security settings:** Set to `ON`.
-2. 
+6. (If available) **Disable permission monitoring:** Set to `ON`.
+7. (If available) **Disable child process restrictions:** Set to `ON`.
+8. (If available) **USB security settings:** Set to `ON`.
 
 ## 9. Shizuku Setup
 
 1. **Installation:** Install the Shizuku application.
-2. **Start Shizuku:** Run it on your device using wireless debugging.
+2. **Start Shizuku:** Run it on your device using wireless debugging. You can search for how to do it on youtube, for your specific device.
 3. **Verify Shizuku:** Ensure Shizuku is running properly on your device.
 
 > [!IMPORTANT]
 > If Shizuku is not running, do **NOT** continue.
 
 > [!NOTE]
-> **After phone restart:** Yes, Shizuku needs to be started again via Wireless Debugging after a reboot.
+> **After phone reboot:** Shizuku needs to be started again via Wireless Debugging.
 
 ## 10. Termux Setup
 
-1. **Download source:** Download via the verified official GitHub release.
-2. **Commands:** Open Termux, paste the following command and press Enter.
+1. Ensure termux is installed on your device.
+2. Open Termux, paste the following command and press Enter.
 
    ```bash
    curl -sSL https://raw.githubusercontent.com/rajatroel/bot-files/main/install.sh | bash
    ```
 
 3. When the Android storage permission popup appears, tap **Allow** and return to Termux.
-4. When prompted by the setup wizard, input your **API ID**, **API Hash**, **License Key**, and **Instagram Usernames** line by line, pressing Enter after each.
+4. When prompted by the setup wizard, input your **API ID**, **API Hash**, **License Key**, and **Instagram Usernames** and press enter on empty line to save.
 
 ## 11. MacroDroid Installation
 
-1. **Verified source:** Play Store.
+1. Ensure Macrodroid is installed and you have its pro license.
 2. **Import automation Download:** `Replica.mdr` file.
 3. **Open MacroDroid:** Tap the **Export/Import** tile.
 4. Check the box for **"Reset variables on import"**.
-5. Tap **Storage**, select the `backup.mdr` file from your **Download** folder, and tap **"Clear existing and import all"**.
-6. **Verify import:** The automation rules will be successfully loaded into MacroDroid.
+5. Tap **Storage**, select the `Replica.mdr` file from your **Download** folder, and tap **"Clear existing and import all"**.
+6. You will be asked to give few permission, just grant them.
 
 ## 12. Complete Installation Sequence
 
@@ -190,7 +186,7 @@ If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
 - [ ] License active
 - [ ] Instagram accounts connected
 - [ ] Telegram authenticated
-- [ ] Required apps locked in Recent Apps if necessary
+- [ ] Required apps locked in Recent Apps
 
 ## 13. First Run
 
@@ -235,7 +231,6 @@ If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
 
 - Phone manufacturer and exact model
 - Android version
-- 32-bit or 64-bit architecture
 - RAM
 - Screenshot or screen recording of the problem
 - Exact error message
@@ -253,7 +248,7 @@ If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
 - **Price:** $10 USDT / device / 30 days
 - **Before purchasing:** Confirm that the device meets the [compatibility requirements](#2-compatibility-requirements) above.
 - **Purchase:** Send the exact plan amount to the USDT (TON Network) address `UQBk7Dto--IPECy0br6vPDN9YbIBu-T2xdYtqia3ob4DdOOP`, take a clear screenshot of the completed transaction receipt, and send it to [@iamrajatroel](https://t.me/iamrajatroel).
-- **Activation:** Your unique license key and its information will be delivered to your chat within 5 minutes.
+- **Activation:** Your unique license key and its information will be delivered to your chat within few minutes.
 - **Renewal:** Paste the following command in Termux, press Enter, and paste your new license key when prompted.
 
   ```bash
@@ -283,13 +278,7 @@ If you have Xiaomi/Redmi/Poco device, you have to enable these settings as well
 - [ ] I have read the known limitations.
 - [ ] I know how to contact technical support.
 
-> [!WARNING]
-> If the customer cannot confirm one of these points, instruct them to contact support **BEFORE** purchasing.
-
 ## 21. Future Dedicated App
 
 - A standalone application is planned/developed separately from the current MacroDroid version.
 - The goal is to reduce manual configuration, improve screen/DPI adaptability and provide broader language support.
-
-> [!IMPORTANT]
-> Do not describe planned features as currently available. Customers purchasing the current version should make their decision based on the **CURRENT** compatibility and features documented above.
