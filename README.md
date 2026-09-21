@@ -1,5 +1,3 @@
-<div align="center">
-
 # 👑 SMM Kingdom Tasks Automation Bot - Official README
 
 [![Version](https://img.shields.io/badge/version-v1.0-blue?style=flat-square)](#18-updates--changelog)
