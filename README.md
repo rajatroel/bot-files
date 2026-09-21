@@ -1,12 +1,12 @@
 # 👑 SMM Kingdom Tasks Automation Bot
 
-A fully automated, background task-completion engine built for @SmmKingdomTasksBot. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
-
-
 [![Version](https://img.shields.io/badge/version-v1.0-blue?style=flat-square)](#18-updates--changelog)
 [![Android](https://img.shields.io/badge/Android-11%20to%2016-3DDC84?style=flat-square&logo=android&logoColor=white)](#2-compatibility-requirements)
 [![Setup](https://img.shields.io/badge/setup-MacroDroid-orange?style=flat-square)](#11-macrodroid-installation)
 [![Support](https://img.shields.io/badge/support-%40iamrajatroel-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/iamrajatroel)
+
+A fully automated, background task-completion engine built for @SmmKingdomTasksBot. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
+
 
 ## 1. Current Version Information
 
