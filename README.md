@@ -1,4 +1,7 @@
-# 👑 SMM Kingdom Tasks Automation Bot - Official README
+# 👑 SMM Kingdom Tasks Automation Bot
+
+A fully automated, background task-completion engine built for @SmmKingdomTasksBot. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
+
 
 [![Version](https://img.shields.io/badge/version-v1.0-blue?style=flat-square)](#18-updates--changelog)
 [![Android](https://img.shields.io/badge/Android-11%20to%2016-3DDC84?style=flat-square&logo=android&logoColor=white)](#2-compatibility-requirements)
@@ -56,30 +59,6 @@ Very low-end hardware configurations (these will experience system instability o
 
 - The current MacroDroid automation uses fixed screen coordinates. Changing this setting affects the scale of the **ENTIRE** Android interface. Text, icons, buttons and other interface elements may become significantly smaller, which may be less comfortable for normal everyday phone use.
 
-## 6. Required Applications
-
-| Application | Requirement / Source |
-|:------------|:---------------------|
-| **MacroDroid** | Download and purchase its pro license. |
-| **Termux** | Download and install it on your device. |
-| **Shizuku** | Download, install and run it on your device. |
-| **ZArchiver** | Download and open it once to grant necessary permissions.|
-| **Instagram** | Official app required. |
-| **Telegram** | Official app required. |
-
-## 7. Required Android Settings & Permissions
-
-| Application | Setting | Required State |
-|:------------|:--------|:---------------|
-| **MacroDroid** | Accessibility | Must be ON |
-| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
-| **MacroDroid** | Display over other apps | Must be ON |
-| **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
-| **Termux** | Files & Storage / Media | Must be ON |
-| **Shizuku** | Battery optimization | Must be Unrestricted / No Restrictions |
-| **Shizuku** | Wireless debugging | Must be ON |
-| **ZArchiver** | Files & Storage / Media | Must be ON |
-| **Telegram on other device** | Camera access | Must be ON (required for the Telegram QR scanner) |
 
 ## 8. Developer Options Setup
 
@@ -104,35 +83,7 @@ Very low-end hardware configurations (these will experience system instability o
 > [!NOTE]
 > **After phone reboot:** Shizuku needs to be started again via Wireless Debugging.
 
-# 👑 SMM Kingdom Tasks Automation Bot (Android 11+) 
-
-A fully automated, background task-completion engine built for @SmmKingdomTasksBot. This system automates Instagram Likes, Comments, account switching, and intelligent AI-powered vision captcha solving.
-
-## 📱 Section 1: Compatibility & Device Requirements
-Before purchasing, please ensure your device meets the following criteria:
-
-*   **Supported OS:** Android 11 and above. 
-*   **Architecture:** 32-bit and 64-bit devices are fully supported.
-*   **Minimum Hardware:** 4GB RAM is recommended for stable background processing.
-*   **Tested & Confirmed:** Devices running Android 11 to 16 with standard manufacturer UIs.
-*   **Untested:** Non-standard custom Android ROMs.
-*   **Known Incompatible:** Android 10 and below, or very low-end hardware configurations (these will experience system instability or background task killing).
-*   **Display Limitation (600 dp):** The current version relies on fixed screen coordinates, which requires changing your device's "Smallest width" to 600 dp via developer settings. **Warning:** This will significantly reduce the size of your entire Android interface, making text and icons much smaller, which may be less comfortable for normal everyday phone use.
-*   **Language Requirement:** The phone system language (or at least the specific app languages for Chrome and Instagram) must be set to English (United States or English UK). The language inside @SmmKingdomTasksBot on Telegram must also be set to English. *(Note: This is a temporary limitation of the MacroDroid setup and will be fully resolved in our future dedicated app).*
-
-## ⚙️ Section 2: Prerequisites & System Settings
-Before installing any files, configure your Android phone with these exact settings:
-
-1.  **Instagram Accounts:** Log in to all your working VIP Instagram accounts inside the official Instagram app, and ensure they are added to @SmmKingdomTasksBot.
-2.  **Required System Permissions:** You must manually grant the following permissions when prompted. Do not skip any, or the bot will fail:
-    *   **Accessibility:** Required for MacroDroid to interact with the screen.
-    *   **Display Over Other Apps:** Required for automation overlays.
-    *   **Files & Storage / Media:** Required for ZArchiver, Termux & Macrodroid to read and write system files.
-    *   **Camera:** Required for the Telegram QR scanner.
-    *   **Battery Optimization (Unrestricted):** You must set Termux, MacroDroid, and Shizuku to "Unrestricted" or "No Restrictions" in your Android battery settings to prevent the system from killing them in the background.
-3.  **App Pinning / Locking:** After completing the whole setup, lock both Termux and MacroDroid in your phone's Recent Apps (App Switcher) screen so Android's memory manager never kills them.
-
-## 🔑 Section 3: Step 1 — Generate Telegram API ID & Hash
+## 10. Generate Telegram API ID & Hash
 The bot connects directly to the Telegram network and binds your license to your unique Telegram credentials.
 
 > **Crucial:** You must generate your API ID and Hash using the exact Telegram phone number you will be using to run the automation bot.
@@ -152,6 +103,22 @@ Install these four tools onto your device:
 2. **MacroDroid:** Download & install the [Macrodroid](https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid) app (Recommended: Purchase its pro license).
 3. **ZArchiver:** Download & install the [Zarchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) app. (After downloading Zarchiver, open it and allow permissions then close it simply).
 4. **Shizuku:** Download & install the [Shizuku](https://github.com/rajatroel/bot-files/releases/download/v1.0/Shizuku.apk) app. Run it on your device using wireless debugging. (You can search for how to run it on YouTube, for your specific device).
+
+
+## 7. Required Android Settings &
+Permissions
+
+| Application | Setting | Required State |
+|:------------|:--------|:---------------|
+| **MacroDroid** | Accessibility | Must be ON |
+| **MacroDroid** | attery optimization | Must be Unrestricted / No Restrictions |
+| **MacroDroid** | Display over other apps | Must be ON |
+| **Termux** | Battery optimization | Must be Unrestricted / No Restrictions |
+| **Termux** | Files & Storage / Media | Must be ON |
+| **Shizuku** | Battery optimization | Must be Unrestricted / No Restrictions |
+| **Shizuku** | Wireless debugging | Must be ON |
+| **ZArchiver** | Files & Storage / Media | Must be ON |
+| **Telegram on other device** | Camera access | Must be ON (required for the Telegram QR scanner) |
 
 ## 💻 Section 5: Step 3 — Run Termux Installer & Configuration
 1. Open **Termux**.
