@@ -117,9 +117,16 @@ The bot connects directly to the Telegram network and binds your license to your
    * **API Hash:** Paste your alphanumeric API Hash → Press **Enter**.
    * **License Key:** Paste your license key (e.g., `SMMK-1D-XXXX-XXXX-XXXX`) → Press **Enter**.
    * **Instagram Usernames:** Paste each Instagram account display name one by one, pressing **Enter** after each name.
-5. When all accounts have been entered, prepare your second phone as given in the next section.
+5. When all accounts have been entered, just press enter on empty line to save.
 
-## 10. One-Time Telegram QR Login
+## 10. Complete the Initial Setup
+1. Ensure the **Shizuku** app is installed and running on your device.
+2. Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file to your phone's `Download` folder.
+3. Ensure you device minimum width/dpi is set to 600.
+4. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for further MacroDroid adjustments.
+5. Start the automation by toggling the MacroDroid switch.
+
+## 11. One-Time Telegram QR Login
 Prepare a **second phone** that has the official Telegram app logged into your target number.
 
 1. **Prepare the Scanner:** On your second phone, open Telegram and navigate to **Settings → Devices → Link Desktop Device**. (If the camera shows a black screen, go to your Android Settings → Apps → Telegram → Permissions, and allow **Camera** access. Verify the camera is working in Telegram).
@@ -127,16 +134,6 @@ Prepare a **second phone** that has the official Telegram app logged into your t
 3. **Open & Scan:** When prompted on your main screen, choose to open the file with **ZArchiver**. Immediately scan the QR code using your second phone.
 4. **2FA Password:** If your Telegram account has Two-Step Verification enabled, Termux will prompt you for your password. Type it in and press **Enter**.
 5. **Success:** Once authenticated, the temporary image file is deleted, and your session file remains permanently stored in your internal storage. You will see a new device logged in on your Telegram app.
-6. **Safe Exit:** Press the back button on your main phone to exit the image. To securely close Termux, swipe it away from your Recent Apps menu, reopen Termux, pull down your Android notification panel, and tap **Exit**.
-
-## 11. Complete the Initial Setup
-1. Ensure the **Shizuku** app is installed and running on your device.
-2. Download the Latest Macrodroid [Replica.mdr](https://github.com/rajatroel/bot-files/releases/download/v1.0/Replica.mdr) file to your phone's `Download` folder.
-3. Ensure you device minimum width/dpi is set to 600.
-4. Follow the visual [Tutorial](https://t.me/+2QbpNDGSQc05YjQ1) video for further MacroDroid adjustments.
-5. Start the automation by toggling the MacroDroid switch.
-
-All done!
 
 ## 12. Required Android Settings &
 Permissions
