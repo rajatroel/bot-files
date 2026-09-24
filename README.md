@@ -16,7 +16,7 @@ A fully automated, background task-completion engine built for @SmmKingdomTasksB
 | **Setup type** | MacroDroid based |
 | **Documentation last updated** | September 21, 2026 |
 | **License price** | $10 per month |
-| **Support contact** | [@iamrajatroel](https://t.me/iamrajatroel) |
+| **Support contact** | [telegram](https://t.me/iamrajatroel) |
 
 ## 2. Compatibility Requirements
 
