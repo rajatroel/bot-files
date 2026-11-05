@@ -268,38 +268,6 @@ async def smart_send(text_to_send):
                 
     await kill_everything("Bot server stopped responding after 2 attempts.")
 
-async def smart_send_photo():
-    photo_path = "/sdcard/Latest.png"
-    delay = random.uniform(3.0, 4.0)
-    await asyncio.sleep(delay)
-    
-    if not os.path.exists(photo_path):
-        print(f"ERROR: Screenshot not found at {photo_path}")
-        return False
-
-    for attempt in range(1, 3): 
-        bot_replied_event.clear()
-        print(f"Uploading screenshot... (Attempt {attempt}/2)")
-        
-        try:
-            await client.send_file(TARGET_CHAT, photo_path)
-            await asyncio.wait_for(bot_replied_event.wait(), timeout=60.0)
-            print("Bot replied successfully after photo upload!")
-            return True
-        except asyncio.TimeoutError:
-            if attempt == 1:
-                print("Bot didn't reply to photo in 60s! Retrying...")
-            else:
-                print("Bot still didn't reply to photo after 2nd attempt!")
-                return False
-        except Exception as e:
-            print(f"Network error uploading photo: {e}")
-            if attempt == 1:
-                print("Retrying in 3 seconds...")
-                await asyncio.sleep(3.0)
-            else:
-                return False
-
 async def do_switch_account(target_display_name):
     print(f"Switching to: {target_display_name}")
     await fire_intent("com.bot.SWITCH", {"Account": target_display_name})
@@ -346,9 +314,7 @@ async def do_comment_task(link, full_msg_text):
     
     status = await wait_for_macro(90.0)
     if status == "success":
-        photo_sent = await smart_send_photo()
-        if not photo_sent:
-            await smart_send("❌Skip")
+        await smart_send("✅Completed")
     else:
         await smart_send("❌Skip")
 
